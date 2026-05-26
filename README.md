@@ -15,12 +15,16 @@ Given a mathematics paper on arXiv, COMPOSE predicts what theorems will be prove
 ```bash
 git clone https://github.com/david-busbib/COMPOSE && cd COMPOSE
 pip install -r requirements.txt
-bash scripts/download_checkpoint.sh        # ~35 GB
+bash scripts/download_checkpoint.sh        # ~35 GB  (model weights)
+bash scripts/download_mathlib.sh           # ~3 GB   (Mathlib corpus for enc2)
 
+export COMPOSE_DATA_DIR=$PWD/data
 python3 code/run_on_paper.py --arxiv_id 1911.06307
 ```
 
 `run_on_paper.py` fetches the paper and its references from Semantic Scholar, builds the citation graph and the Mathlib theorem subgraph automatically, and runs COMPOSE. No training data needed.
+
+> **Without `download_mathlib.sh`** the model runs in enc1-only mode (citation graph only, no Mathlib encoder). Results will be weaker.
 
 ## Results
 
