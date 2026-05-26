@@ -1,0 +1,51 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.python-version
+
+# IDE
+.vscode/
+.idea/
+*.swp
+.DS_Store
+
+# LaTeX build artifacts
+paper/*.aux
+paper/*.log
+paper/*.out
+paper/*.bbl
+paper/*.blg
+paper/*.toc
+paper/*.fls
+paper/*.fdb_latexmk
+paper/*.synctex.gz
+paper/main.pdf
+paper/sections/*.aux
+
+# Large artifacts (hosted on HuggingFace, see MANIFEST.md)
+data/*.jsonl
+data/*.npy
+data/*.npz
+data/*.json
+!data/MANIFEST.md
+checkpoints/*.pt
+checkpoints/*.bin
+checkpoints/*.safetensors
+!checkpoints/MANIFEST.md
+
+# Eval result outputs (regeneratable)
+code/baselines/metrics/*.npy
+code/baselines/metrics/*.npz
+code/baselines/metrics/eval_*.json
+
+# Training run output
+logs/
+wandb/
+*_checkpoints_*/
+slurm-*.out
+
+# Local config
+.env

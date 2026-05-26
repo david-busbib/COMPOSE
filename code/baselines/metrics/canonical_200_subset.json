@@ -1,0 +1,1021 @@
+{
+  "description": "Canonical 200-sample subset: top-150 oracle hits by tgt_sim + 50 universally hard misses",
+  "oracle_files": [
+    "eval_full_graph_2026-04-29_06-39-25.json",
+    "eval_full_graph_2026-04-13_11-05-55.json"
+  ],
+  "baseline_files": [
+    "eval_goai_2026-04-29_21-24-13",
+    "eval_giants_2026-04-28_23-25-42",
+    "eval_prompt_only_2026-04-28_17-19-52",
+    "eval_text_only_2026-04-28_15-48-04",
+    "eval_futuregen_2026-04-29_15-54-44",
+    "eval_paper_graph_only_2026-04-28_22-46-39"
+  ],
+  "n_hits": 150,
+  "n_miss": 50,
+  "subgraph_ids": [
+    "20250725_113419_00148_vtvw6_1ff78f89-0734-434e-aa4b-b60a4866871d.json_1700_h2_filtered",
+    "20250725_113419_00148_vtvw6_58e59547-eba5-43af-b6b7-85e61da0c622.json_7253_h2_filtered",
+    "20250725_113419_00148_vtvw6_1a9917e3-6c00-4122-9c74-1788af3c779e.json_5503_h2_filtered",
+    "20250725_113419_00148_vtvw6_137bc269-c16a-4d8d-95da-83e3e5c5d554.json_2624_h2_filtered",
+    "20250725_113419_00148_vtvw6_4d6d3d16-9d71-4442-9475-cb516aa794f7.json_4929_h2_filtered",
+    "20250725_113419_00148_vtvw6_757604cc-6b04-4106-8736-33956e278843.json_302_h2_filtered",
+    "20250725_113419_00148_vtvw6_50aafb88-6a05-4a01-97d7-448af0c2e5a8.json_6474_h2_filtered",
+    "20250725_113419_00148_vtvw6_5585ea32-7967-41d9-ba75-096d979e6467.json_51_h2_filtered",
+    "20250725_113419_00148_vtvw6_6c473cb0-ac95-43cd-9b37-db15e2bdcf75.json_4323_h2_filtered",
+    "20250725_113419_00148_vtvw6_58e59547-eba5-43af-b6b7-85e61da0c622.json_6059_h2_filtered",
+    "20250725_113419_00148_vtvw6_636d70ec-3e63-40c7-b83a-3590c55927b9.json_6505_h2_filtered",
+    "20250725_113419_00148_vtvw6_105ff5a2-51af-4fd9-b46c-282c54665292.json_4303_h2_filtered",
+    "20250725_113419_00148_vtvw6_128790b2-6784-43f0-a02f-b67ba8044f45.json_1706_h2_filtered",
+    "20250725_113419_00148_vtvw6_556370af-554a-417f-89ba-fb87472e03a0.json_1919_h2_filtered",
+    "20250725_113419_00148_vtvw6_187935fa-4cbe-4bd0-ab7d-ac42c1d53de8.json_4526_h2_filtered",
+    "20250725_113419_00148_vtvw6_0d87ea0a-2210-4c07-866a-20d1ca39bbdc.json_765_h2_filtered",
+    "20250725_113419_00148_vtvw6_4af2b5b5-eabb-4baf-8a35-871e5c74170c.json_2215_h2_filtered",
+    "20250725_113419_00148_vtvw6_4fda2eaa-69d4-41a6-aa1d-fea617d42a09.json_5221_h2_filtered",
+    "20250725_113419_00148_vtvw6_047cbfc6-3a8c-43cc-8d47-58c407ebdc50.json_1023_h2_filtered",
+    "20250725_113419_00148_vtvw6_1559f7c3-6d44-4419-a52c-051e7b94e399.json_3581_h2_filtered",
+    "20250725_113419_00148_vtvw6_575483f8-6c4a-49bb-8e80-b5e4135c8ec3.json_5127_h2_filtered",
+    "20250725_113419_00148_vtvw6_60cab0fd-fbf0-4362-a9b5-bb254c7860bf.json_558_h2_filtered",
+    "20250725_113419_00148_vtvw6_1cb654d8-0761-4453-8f95-0641ec4d27b0.json_3280_h2_filtered",
+    "20250725_113419_00148_vtvw6_337c6fea-8498-48ae-b355-0bb03dba8270.json_3228_h2_filtered",
+    "20250725_113419_00148_vtvw6_337c6fea-8498-48ae-b355-0bb03dba8270.json_7879_h2_filtered",
+    "20250725_113419_00148_vtvw6_187935fa-4cbe-4bd0-ab7d-ac42c1d53de8.json_6642_h2_filtered",
+    "20250725_113419_00148_vtvw6_4fa952ef-5078-46ed-942e-fb1067bfd5bd.json_617_h2_filtered",
+    "20250725_113419_00148_vtvw6_6c473cb0-ac95-43cd-9b37-db15e2bdcf75.json_3940_h2_filtered",
+    "20250725_113419_00148_vtvw6_757604cc-6b04-4106-8736-33956e278843.json_1032_h2_filtered",
+    "20250725_113419_00148_vtvw6_4202f67b-d4a3-48ec-ac04-ba3d84f3f7c1.json_6867_h2_filtered",
+    "20250725_113419_00148_vtvw6_0004948a-a201-4823-a42d-d766ce8836b7.json_4268_h2_filtered",
+    "20250725_113419_00148_vtvw6_20a5c4ed-835d-4719-b83f-1920b5d7c488.json_2218_h2_filtered",
+    "20250725_113419_00148_vtvw6_6cd707ef-64f6-42e5-97d4-b4d0bd11d0b6.json_1064_h2_filtered",
+    "20250725_113419_00148_vtvw6_1559f7c3-6d44-4419-a52c-051e7b94e399.json_13_h2_filtered",
+    "20250725_113419_00148_vtvw6_44bdd3c9-55b9-4569-876b-32e8da09e36b.json_6482_h2_filtered",
+    "20250725_113419_00148_vtvw6_46be102c-06f7-4ae3-97e0-0b315554b0b0.json_2571_h2_filtered",
+    "20250725_113419_00148_vtvw6_60cab0fd-fbf0-4362-a9b5-bb254c7860bf.json_7810_h2_filtered",
+    "20250725_113419_00148_vtvw6_4fda2eaa-69d4-41a6-aa1d-fea617d42a09.json_7155_h2_filtered",
+    "20250725_113419_00148_vtvw6_105ff5a2-51af-4fd9-b46c-282c54665292.json_4078_h2_filtered",
+    "20250725_113419_00148_vtvw6_137bc269-c16a-4d8d-95da-83e3e5c5d554.json_2777_h2_filtered",
+    "20250725_113419_00148_vtvw6_73e7abc1-55bc-4d72-b319-8a96f2881c97.json_4429_h2_filtered",
+    "20250725_113419_00148_vtvw6_38ff30b4-e332-46ba-b16f-df27efd5909d.json_5708_h2_filtered",
+    "20250725_113419_00148_vtvw6_137bc269-c16a-4d8d-95da-83e3e5c5d554.json_2243_h2_filtered",
+    "20250725_113419_00148_vtvw6_2812161e-2e25-4f49-8a18-e06bb9bf80c3.json_3976_h2_filtered",
+    "20250725_113419_00148_vtvw6_1a9917e3-6c00-4122-9c74-1788af3c779e.json_5560_h2_filtered",
+    "20250725_113419_00148_vtvw6_5f95de58-5a14-45df-a387-1559dae0ed02.json_1354_h2_filtered",
+    "20250725_113419_00148_vtvw6_58e59547-eba5-43af-b6b7-85e61da0c622.json_6962_h2_filtered",
+    "20250725_113419_00148_vtvw6_1f872b00-d51f-4740-8e22-08532bf7977f.json_2062_h2_filtered",
+    "20250725_113419_00148_vtvw6_3c96559d-e594-4071-9d6f-8b05286c4644.json_5514_h2_filtered",
+    "20250725_113419_00148_vtvw6_3ffe8e95-91e7-460d-a488-a5c85cb4f684.json_1988_h2_filtered",
+    "20250725_113419_00148_vtvw6_556370af-554a-417f-89ba-fb87472e03a0.json_2592_h2_filtered",
+    "20250725_113419_00148_vtvw6_44bdd3c9-55b9-4569-876b-32e8da09e36b.json_3392_h2_filtered",
+    "20250725_113419_00148_vtvw6_757604cc-6b04-4106-8736-33956e278843.json_317_h2_filtered",
+    "20250725_113419_00148_vtvw6_4af2b5b5-eabb-4baf-8a35-871e5c74170c.json_4010_h2_filtered",
+    "20250725_113419_00148_vtvw6_4fda2eaa-69d4-41a6-aa1d-fea617d42a09.json_1725_h2_filtered",
+    "20250725_113419_00148_vtvw6_1f872b00-d51f-4740-8e22-08532bf7977f.json_4733_h2_filtered",
+    "20250725_113419_00148_vtvw6_58e59547-eba5-43af-b6b7-85e61da0c622.json_3631_h2_filtered",
+    "20250725_113419_00148_vtvw6_59d2a3ea-ae85-46ca-a575-b1384f660b8b.json_130_h2_filtered",
+    "20250725_113419_00148_vtvw6_3c96559d-e594-4071-9d6f-8b05286c4644.json_3686_h2_filtered",
+    "20250725_113419_00148_vtvw6_187935fa-4cbe-4bd0-ab7d-ac42c1d53de8.json_4668_h2_filtered",
+    "20250725_113419_00148_vtvw6_0bbfd62a-af6c-415a-aab4-c443972e1d47.json_3366_h2_filtered",
+    "20250725_113419_00148_vtvw6_137bc269-c16a-4d8d-95da-83e3e5c5d554.json_2711_h2_filtered",
+    "20250725_113419_00148_vtvw6_0f698161-244e-4620-b3e8-9b43062627c2.json_6725_h2_filtered",
+    "20250725_113419_00148_vtvw6_27309a04-ad95-4e37-be28-98b916ea1933.json_197_h2_filtered",
+    "20250725_113419_00148_vtvw6_06d74482-b6e4-42b0-81b1-c105c3f53e6a.json_3816_h2_filtered",
+    "20250725_113419_00148_vtvw6_6cd707ef-64f6-42e5-97d4-b4d0bd11d0b6.json_5296_h2_filtered",
+    "20250725_113419_00148_vtvw6_137a4bde-9370-451d-b512-fbe01ceab7eb.json_2339_h2_filtered",
+    "20250725_113419_00148_vtvw6_1a9917e3-6c00-4122-9c74-1788af3c779e.json_444_h2_filtered",
+    "20250725_113419_00148_vtvw6_105ff5a2-51af-4fd9-b46c-282c54665292.json_7107_h2_filtered",
+    "20250725_113419_00148_vtvw6_4af2b5b5-eabb-4baf-8a35-871e5c74170c.json_2990_h2_filtered",
+    "20250725_113419_00148_vtvw6_4b33af78-da23-4536-a5f8-7d3b2b64c1d2.json_7348_h2_filtered",
+    "20250725_113419_00148_vtvw6_2d0ef69a-0986-44c8-a51e-8c549c2b1f88.json_16_h2_filtered",
+    "20250725_113419_00148_vtvw6_5a6f4aa7-395d-4772-8304-cd3a7b401462.json_353_h2_filtered",
+    "20250725_113419_00148_vtvw6_0d87ea0a-2210-4c07-866a-20d1ca39bbdc.json_7427_h2_filtered",
+    "20250725_113419_00148_vtvw6_0004948a-a201-4823-a42d-d766ce8836b7.json_4255_h2_filtered",
+    "20250725_113419_00148_vtvw6_2d0ef69a-0986-44c8-a51e-8c549c2b1f88.json_1845_h2_filtered",
+    "20250725_113419_00148_vtvw6_187935fa-4cbe-4bd0-ab7d-ac42c1d53de8.json_3646_h2_filtered",
+    "20250725_113419_00148_vtvw6_6d5094a2-ca20-4642-8a9c-543a9be5468a.json_82_h2_filtered",
+    "20250725_113419_00148_vtvw6_105ff5a2-51af-4fd9-b46c-282c54665292.json_2797_h2_filtered",
+    "20250725_113419_00148_vtvw6_646758f6-662c-4f4a-9fe1-af2a79f7f125.json_6069_h2_filtered",
+    "20250725_113419_00148_vtvw6_0bbfd62a-af6c-415a-aab4-c443972e1d47.json_5837_h2_filtered",
+    "20250725_113419_00148_vtvw6_69ce0357-396e-4faa-af4c-eab435ab576d.json_199_h2_filtered",
+    "20250725_113419_00148_vtvw6_4b33af78-da23-4536-a5f8-7d3b2b64c1d2.json_7405_h2_filtered",
+    "20250725_113419_00148_vtvw6_61569199-0658-45c3-9103-774376a4d30e.json_7413_h2_filtered",
+    "20250725_113419_00148_vtvw6_636d70ec-3e63-40c7-b83a-3590c55927b9.json_3099_h2_filtered",
+    "20250725_113419_00148_vtvw6_69844373-997f-4021-af68-dbff8e7bff33.json_8219_h2_filtered",
+    "20250725_113419_00148_vtvw6_1cb654d8-0761-4453-8f95-0641ec4d27b0.json_4410_h2_filtered",
+    "20250725_113419_00148_vtvw6_1302b877-be7b-4f16-8155-88974058d2bc.json_3903_h2_filtered",
+    "20250725_113419_00148_vtvw6_137bc269-c16a-4d8d-95da-83e3e5c5d554.json_4363_h2_filtered",
+    "20250725_113419_00148_vtvw6_24bd001e-26dd-4d9b-a8bd-93e8de9dc510.json_4899_h2_filtered",
+    "20250725_113419_00148_vtvw6_2acc28cd-8896-43fe-b9c0-8a2bb3ccbc1c.json_1608_h2_filtered",
+    "20250725_113419_00148_vtvw6_60cab0fd-fbf0-4362-a9b5-bb254c7860bf.json_8398_h2_filtered",
+    "20250725_113419_00148_vtvw6_4f1fef48-902d-446e-acb7-91cca7b3e869.json_804_h2_filtered",
+    "20250725_113419_00148_vtvw6_70589e9a-9ceb-4760-8877-059d2fd4f765.json_6572_h2_filtered",
+    "20250725_113419_00148_vtvw6_187935fa-4cbe-4bd0-ab7d-ac42c1d53de8.json_2428_h2_filtered",
+    "20250725_113419_00148_vtvw6_3c96559d-e594-4071-9d6f-8b05286c4644.json_3197_h2_filtered",
+    "20250725_113419_00148_vtvw6_50aafb88-6a05-4a01-97d7-448af0c2e5a8.json_3206_h2_filtered",
+    "20250725_113419_00148_vtvw6_187935fa-4cbe-4bd0-ab7d-ac42c1d53de8.json_3804_h2_filtered",
+    "20250725_113419_00148_vtvw6_73e7abc1-55bc-4d72-b319-8a96f2881c97.json_878_h2_filtered",
+    "20250725_113419_00148_vtvw6_6cd707ef-64f6-42e5-97d4-b4d0bd11d0b6.json_6854_h2_filtered",
+    "20250725_113419_00148_vtvw6_0f698161-244e-4620-b3e8-9b43062627c2.json_912_h2_filtered",
+    "20250725_113419_00148_vtvw6_59346acc-5135-493b-b038-ecc57f7774ed.json_1489_h2_filtered",
+    "20250725_113419_00148_vtvw6_5575ee6b-b7af-43cb-93bf-940126492de7.json_2208_h2_filtered",
+    "20250725_113419_00148_vtvw6_757604cc-6b04-4106-8736-33956e278843.json_6422_h2_filtered",
+    "20250725_113419_00148_vtvw6_4fda2eaa-69d4-41a6-aa1d-fea617d42a09.json_8237_h2_filtered",
+    "20250725_113419_00148_vtvw6_6cd707ef-64f6-42e5-97d4-b4d0bd11d0b6.json_2038_h2_filtered",
+    "20250725_113419_00148_vtvw6_1cb654d8-0761-4453-8f95-0641ec4d27b0.json_8052_h2_filtered",
+    "20250725_113419_00148_vtvw6_0bbfd62a-af6c-415a-aab4-c443972e1d47.json_2925_h2_filtered",
+    "20250725_113419_00148_vtvw6_70000a7b-8639-465b-85db-94873db8e417.json_2376_h2_filtered",
+    "20250725_113419_00148_vtvw6_556370af-554a-417f-89ba-fb87472e03a0.json_7647_h2_filtered",
+    "20250725_113419_00148_vtvw6_646758f6-662c-4f4a-9fe1-af2a79f7f125.json_1866_h2_filtered",
+    "20250725_113419_00148_vtvw6_0f698161-244e-4620-b3e8-9b43062627c2.json_3588_h2_filtered",
+    "20250725_113419_00148_vtvw6_69844373-997f-4021-af68-dbff8e7bff33.json_3969_h2_filtered",
+    "20250725_113419_00148_vtvw6_0bbfd62a-af6c-415a-aab4-c443972e1d47.json_1794_h2_filtered",
+    "20250725_113419_00148_vtvw6_62411420-5675-4f2b-ad14-6ec57a29c256.json_3796_h2_filtered",
+    "20250725_113419_00148_vtvw6_5585ea32-7967-41d9-ba75-096d979e6467.json_1995_h2_filtered",
+    "20250725_113419_00148_vtvw6_680673c6-fcdb-49d1-8323-7d6d0b19865a.json_5844_h2_filtered",
+    "20250725_113419_00148_vtvw6_0d87ea0a-2210-4c07-866a-20d1ca39bbdc.json_2572_h2_filtered",
+    "20250725_113419_00148_vtvw6_047cbfc6-3a8c-43cc-8d47-58c407ebdc50.json_2524_h2_filtered",
+    "20250725_113419_00148_vtvw6_1559f7c3-6d44-4419-a52c-051e7b94e399.json_4683_h2_filtered",
+    "20250725_113419_00148_vtvw6_50aafb88-6a05-4a01-97d7-448af0c2e5a8.json_5724_h2_filtered",
+    "20250725_113419_00148_vtvw6_6c473cb0-ac95-43cd-9b37-db15e2bdcf75.json_7319_h2_filtered",
+    "20250725_113419_00148_vtvw6_0174003b-6e9c-47a6-ba51-1b82aee15541.json_343_h2_filtered",
+    "20250725_113419_00148_vtvw6_575483f8-6c4a-49bb-8e80-b5e4135c8ec3.json_5669_h2_filtered",
+    "20250725_113419_00148_vtvw6_00b77987-7803-423e-a3f0-6616b2a3fd8e.json_4439_h2_filtered",
+    "20250725_113419_00148_vtvw6_38ff30b4-e332-46ba-b16f-df27efd5909d.json_7403_h2_filtered",
+    "20250725_113419_00148_vtvw6_70589e9a-9ceb-4760-8877-059d2fd4f765.json_3868_h2_filtered",
+    "20250725_113419_00148_vtvw6_50aafb88-6a05-4a01-97d7-448af0c2e5a8.json_5878_h2_filtered",
+    "20250725_113419_00148_vtvw6_575483f8-6c4a-49bb-8e80-b5e4135c8ec3.json_3505_h2_filtered",
+    "20250725_113419_00148_vtvw6_69ce0357-396e-4faa-af4c-eab435ab576d.json_201_h2_filtered",
+    "20250725_113419_00148_vtvw6_4202f67b-d4a3-48ec-ac04-ba3d84f3f7c1.json_6671_h2_filtered",
+    "20250725_113419_00148_vtvw6_4c1602a2-90b5-4dd2-b7d1-9ae0521311b4.json_199_h2_filtered",
+    "20250725_113419_00148_vtvw6_556370af-554a-417f-89ba-fb87472e03a0.json_2936_h2_filtered",
+    "20250725_113419_00148_vtvw6_0d87ea0a-2210-4c07-866a-20d1ca39bbdc.json_6879_h2_filtered",
+    "20250725_113419_00148_vtvw6_24bd001e-26dd-4d9b-a8bd-93e8de9dc510.json_2756_h2_filtered",
+    "20250725_113419_00148_vtvw6_00b77987-7803-423e-a3f0-6616b2a3fd8e.json_2139_h2_filtered",
+    "20250725_113419_00148_vtvw6_61569199-0658-45c3-9103-774376a4d30e.json_7250_h2_filtered",
+    "20250725_113419_00148_vtvw6_4cdafcc8-0100-4e36-a8ad-aa1068aeeba3.json_6103_h2_filtered",
+    "20250725_113419_00148_vtvw6_6cd707ef-64f6-42e5-97d4-b4d0bd11d0b6.json_7690_h2_filtered",
+    "20250725_113419_00148_vtvw6_1cb654d8-0761-4453-8f95-0641ec4d27b0.json_7016_h2_filtered",
+    "20250725_113419_00148_vtvw6_3cc927cd-44f4-49f4-a03c-fbf204db635e.json_216_h2_filtered",
+    "20250725_113419_00148_vtvw6_0004948a-a201-4823-a42d-d766ce8836b7.json_145_h2_filtered",
+    "20250725_113419_00148_vtvw6_757604cc-6b04-4106-8736-33956e278843.json_2968_h2_filtered",
+    "20250725_113419_00148_vtvw6_1a9917e3-6c00-4122-9c74-1788af3c779e.json_8319_h2_filtered",
+    "20250725_113419_00148_vtvw6_1a9917e3-6c00-4122-9c74-1788af3c779e.json_5147_h2_filtered",
+    "20250725_113419_00148_vtvw6_0174003b-6e9c-47a6-ba51-1b82aee15541.json_0_h2_filtered",
+    "20250725_113419_00148_vtvw6_62411420-5675-4f2b-ad14-6ec57a29c256.json_7437_h2_filtered",
+    "20250725_113419_00148_vtvw6_6c473cb0-ac95-43cd-9b37-db15e2bdcf75.json_2137_h2_filtered",
+    "20250725_113419_00148_vtvw6_4af2b5b5-eabb-4baf-8a35-871e5c74170c.json_6834_h2_filtered",
+    "20250725_113419_00148_vtvw6_4fda2eaa-69d4-41a6-aa1d-fea617d42a09.json_3260_h2_filtered",
+    "20250725_113419_00148_vtvw6_20a5c4ed-835d-4719-b83f-1920b5d7c488.json_1672_h2_filtered",
+    "20250725_113419_00148_vtvw6_575483f8-6c4a-49bb-8e80-b5e4135c8ec3.json_2507_h2_filtered",
+    "20250725_113419_00148_vtvw6_3c96559d-e594-4071-9d6f-8b05286c4644.json_7197_h2_filtered",
+    "20250725_113419_00148_vtvw6_4f1fef48-902d-446e-acb7-91cca7b3e869.json_5066_h2_filtered",
+    "20250725_113419_00148_vtvw6_695aaa67-1edf-46c7-9fa9-35365cb3dc5d.json_4063_h2_filtered",
+    "20250725_113419_00148_vtvw6_58e59547-eba5-43af-b6b7-85e61da0c622.json_7881_h2_filtered",
+    "20250725_113419_00148_vtvw6_636d70ec-3e63-40c7-b83a-3590c55927b9.json_6573_h2_filtered",
+    "20250725_113419_00148_vtvw6_0d87ea0a-2210-4c07-866a-20d1ca39bbdc.json_6240_h2_filtered",
+    "20250725_113419_00148_vtvw6_0d87ea0a-2210-4c07-866a-20d1ca39bbdc.json_4082_h2_filtered",
+    "20250725_113419_00148_vtvw6_695aaa67-1edf-46c7-9fa9-35365cb3dc5d.json_2017_h2_filtered",
+    "20250725_113419_00148_vtvw6_105ff5a2-51af-4fd9-b46c-282c54665292.json_6644_h2_filtered",
+    "20250725_113419_00148_vtvw6_1cb654d8-0761-4453-8f95-0641ec4d27b0.json_2473_h2_filtered",
+    "20250725_113419_00148_vtvw6_44bdd3c9-55b9-4569-876b-32e8da09e36b.json_7194_h2_filtered",
+    "20250725_113419_00148_vtvw6_24bd001e-26dd-4d9b-a8bd-93e8de9dc510.json_4674_h2_filtered",
+    "20250725_113419_00148_vtvw6_0f698161-244e-4620-b3e8-9b43062627c2.json_2870_h2_filtered",
+    "20250725_113419_00148_vtvw6_187935fa-4cbe-4bd0-ab7d-ac42c1d53de8.json_2056_h2_filtered",
+    "20250725_113419_00148_vtvw6_3c04d0fc-fafb-4689-9dce-006d6956c1c9.json_1837_h2_filtered",
+    "20250725_113419_00148_vtvw6_20a5c4ed-835d-4719-b83f-1920b5d7c488.json_1682_h2_filtered",
+    "20250725_113419_00148_vtvw6_5d0745d8-5a02-467d-b83b-c3f32b5f4af5.json_1476_h2_filtered",
+    "20250725_113419_00148_vtvw6_58e59547-eba5-43af-b6b7-85e61da0c622.json_6745_h2_filtered",
+    "20250725_113419_00148_vtvw6_128790b2-6784-43f0-a02f-b67ba8044f45.json_259_h2_filtered",
+    "20250725_113419_00148_vtvw6_1bccea15-09c9-47c0-8740-454a6d72135a.json_1671_h2_filtered",
+    "20250725_113419_00148_vtvw6_5f95de58-5a14-45df-a387-1559dae0ed02.json_671_h2_filtered",
+    "20250725_113419_00148_vtvw6_320aaf7c-d7ca-4d46-9180-b0d2bc49bd47.json_165_h2_filtered",
+    "20250725_113419_00148_vtvw6_58e59547-eba5-43af-b6b7-85e61da0c622.json_4407_h2_filtered",
+    "20250725_113419_00148_vtvw6_646758f6-662c-4f4a-9fe1-af2a79f7f125.json_4309_h2_filtered",
+    "20250725_113419_00148_vtvw6_2e4f948a-b0eb-429b-b091-8f661c628263.json_7097_h2_filtered",
+    "20250725_113419_00148_vtvw6_261f95a5-10d5-4273-8fcf-e1c649a1a8be.json_296_h2_filtered",
+    "20250725_113419_00148_vtvw6_137a4bde-9370-451d-b512-fbe01ceab7eb.json_7106_h2_filtered",
+    "20250725_113419_00148_vtvw6_575483f8-6c4a-49bb-8e80-b5e4135c8ec3.json_2764_h2_filtered",
+    "20250725_113419_00148_vtvw6_59d2a3ea-ae85-46ca-a575-b1384f660b8b.json_486_h2_filtered",
+    "20250725_113419_00148_vtvw6_61569199-0658-45c3-9103-774376a4d30e.json_4261_h2_filtered",
+    "20250725_113419_00148_vtvw6_5575ee6b-b7af-43cb-93bf-940126492de7.json_5487_h2_filtered",
+    "20250725_113419_00148_vtvw6_1cb654d8-0761-4453-8f95-0641ec4d27b0.json_8410_h2_filtered",
+    "20250725_113419_00148_vtvw6_0004948a-a201-4823-a42d-d766ce8836b7.json_8184_h2_filtered",
+    "20250725_113419_00148_vtvw6_59346acc-5135-493b-b038-ecc57f7774ed.json_3087_h2_filtered",
+    "20250725_113419_00148_vtvw6_5575ee6b-b7af-43cb-93bf-940126492de7.json_3255_h2_filtered",
+    "20250725_113419_00148_vtvw6_6cd707ef-64f6-42e5-97d4-b4d0bd11d0b6.json_6135_h2_filtered",
+    "20250725_113419_00148_vtvw6_4202f67b-d4a3-48ec-ac04-ba3d84f3f7c1.json_7290_h2_filtered",
+    "20250725_113419_00148_vtvw6_38ff30b4-e332-46ba-b16f-df27efd5909d.json_2124_h2_filtered",
+    "20250725_113419_00148_vtvw6_59346acc-5135-493b-b038-ecc57f7774ed.json_7295_h2_filtered",
+    "20250725_113419_00148_vtvw6_38ff30b4-e332-46ba-b16f-df27efd5909d.json_7844_h2_filtered",
+    "20250725_113419_00148_vtvw6_2ffbb7e0-dcce-4eea-b524-3854839f8975.json_5439_h2_filtered",
+    "20250725_113419_00148_vtvw6_59346acc-5135-493b-b038-ecc57f7774ed.json_5834_h2_filtered",
+    "20250725_113419_00148_vtvw6_680673c6-fcdb-49d1-8323-7d6d0b19865a.json_5772_h2_filtered",
+    "20250725_113419_00148_vtvw6_4c1602a2-90b5-4dd2-b7d1-9ae0521311b4.json_6747_h2_filtered",
+    "20250725_113419_00148_vtvw6_06d74482-b6e4-42b0-81b1-c105c3f53e6a.json_8378_h2_filtered",
+    "20250725_113419_00148_vtvw6_137a4bde-9370-451d-b512-fbe01ceab7eb.json_2522_h2_filtered",
+    "20250725_113419_00148_vtvw6_646758f6-662c-4f4a-9fe1-af2a79f7f125.json_3247_h2_filtered",
+    "20250725_113419_00148_vtvw6_1302b877-be7b-4f16-8155-88974058d2bc.json_7610_h2_filtered"
+  ],
+  "subgraph_meta": {
+    "20250725_113419_00148_vtvw6_1ff78f89-0734-434e-aa4b-b60a4866871d.json_1700_h2_filtered": {
+      "tgt_sim_oracle": 0.7110115885734558,
+      "oracle_hit": true
+    },
+    "20250725_113419_00148_vtvw6_58e59547-eba5-43af-b6b7-85e61da0c622.json_7253_h2_filtered": {
+      "tgt_sim_oracle": 0.6299100518226624,
+      "oracle_hit": true
+    },
+    "20250725_113419_00148_vtvw6_1a9917e3-6c00-4122-9c74-1788af3c779e.json_5503_h2_filtered": {
+      "tgt_sim_oracle": 0.6055160164833069,
+      "oracle_hit": true
+    },
+    "20250725_113419_00148_vtvw6_137bc269-c16a-4d8d-95da-83e3e5c5d554.json_2624_h2_filtered": {
+      "tgt_sim_oracle": 0.6023671627044678,
+      "oracle_hit": true
+    },
+    "20250725_113419_00148_vtvw6_4d6d3d16-9d71-4442-9475-cb516aa794f7.json_4929_h2_filtered": {
+      "tgt_sim_oracle": 0.5994803309440613,
+      "oracle_hit": true
+    },
+    "20250725_113419_00148_vtvw6_757604cc-6b04-4106-8736-33956e278843.json_302_h2_filtered": {
+      "tgt_sim_oracle": 0.5982592105865479,
+      "oracle_hit": true
+    },
+    "20250725_113419_00148_vtvw6_50aafb88-6a05-4a01-97d7-448af0c2e5a8.json_6474_h2_filtered": {
+      "tgt_sim_oracle": 0.5959022641181946,
+      "oracle_hit": true
+    },
+    "20250725_113419_00148_vtvw6_5585ea32-7967-41d9-ba75-096d979e6467.json_51_h2_filtered": {
+      "tgt_sim_oracle": 0.590755045413971,
+      "oracle_hit": true
+    },
+    "20250725_113419_00148_vtvw6_6c473cb0-ac95-43cd-9b37-db15e2bdcf75.json_4323_h2_filtered": {
+      "tgt_sim_oracle": 0.5895777344703674,
+      "oracle_hit": true
+    },
+    "20250725_113419_00148_vtvw6_58e59547-eba5-43af-b6b7-85e61da0c622.json_6059_h2_filtered": {
+      "tgt_sim_oracle": 0.5889081358909607,
+      "oracle_hit": true
+    },
+    "20250725_113419_00148_vtvw6_636d70ec-3e63-40c7-b83a-3590c55927b9.json_6505_h2_filtered": {
+      "tgt_sim_oracle": 0.5860626697540283,
+      "oracle_hit": true
+    },
+    "20250725_113419_00148_vtvw6_105ff5a2-51af-4fd9-b46c-282c54665292.json_4303_h2_filtered": {
+      "tgt_sim_oracle": 0.5843756198883057,
+      "oracle_hit": true
+    },
+    "20250725_113419_00148_vtvw6_128790b2-6784-43f0-a02f-b67ba8044f45.json_1706_h2_filtered": {
+      "tgt_sim_oracle": 0.5821213722229004,
+      "oracle_hit": true
+    },
+    "20250725_113419_00148_vtvw6_556370af-554a-417f-89ba-fb87472e03a0.json_1919_h2_filtered": {
+      "tgt_sim_oracle": 0.57977294921875,
+      "oracle_hit": true
+    },
+    "20250725_113419_00148_vtvw6_187935fa-4cbe-4bd0-ab7d-ac42c1d53de8.json_4526_h2_filtered": {
+      "tgt_sim_oracle": 0.5782328248023987,
+      "oracle_hit": true
+    },
+    "20250725_113419_00148_vtvw6_0d87ea0a-2210-4c07-866a-20d1ca39bbdc.json_765_h2_filtered": {
+      "tgt_sim_oracle": 0.5776230692863464,
+      "oracle_hit": true
+    },
+    "20250725_113419_00148_vtvw6_4af2b5b5-eabb-4baf-8a35-871e5c74170c.json_2215_h2_filtered": {
+      "tgt_sim_oracle": 0.5765560269355774,
+      "oracle_hit": true
+    },
+    "20250725_113419_00148_vtvw6_4fda2eaa-69d4-41a6-aa1d-fea617d42a09.json_5221_h2_filtered": {
+      "tgt_sim_oracle": 0.5757044553756714,
+      "oracle_hit": true
+    },
+    "20250725_113419_00148_vtvw6_047cbfc6-3a8c-43cc-8d47-58c407ebdc50.json_1023_h2_filtered": {
+      "tgt_sim_oracle": 0.5754867196083069,
+      "oracle_hit": true
+    },
+    "20250725_113419_00148_vtvw6_1559f7c3-6d44-4419-a52c-051e7b94e399.json_3581_h2_filtered": {
+      "tgt_sim_oracle": 0.5730502009391785,
+      "oracle_hit": true
+    },
+    "20250725_113419_00148_vtvw6_575483f8-6c4a-49bb-8e80-b5e4135c8ec3.json_5127_h2_filtered": {
+      "tgt_sim_oracle": 0.5729530453681946,
+      "oracle_hit": true
+    },
+    "20250725_113419_00148_vtvw6_60cab0fd-fbf0-4362-a9b5-bb254c7860bf.json_558_h2_filtered": {
+      "tgt_sim_oracle": 0.5720458626747131,
+      "oracle_hit": true
+    },
+    "20250725_113419_00148_vtvw6_1cb654d8-0761-4453-8f95-0641ec4d27b0.json_3280_h2_filtered": {
+      "tgt_sim_oracle": 0.5677810907363892,
+      "oracle_hit": true
+    },
+    "20250725_113419_00148_vtvw6_337c6fea-8498-48ae-b355-0bb03dba8270.json_3228_h2_filtered": {
+      "tgt_sim_oracle": 0.5673142075538635,
+      "oracle_hit": true
+    },
+    "20250725_113419_00148_vtvw6_337c6fea-8498-48ae-b355-0bb03dba8270.json_7879_h2_filtered": {
+      "tgt_sim_oracle": 0.5672008395195007,
+      "oracle_hit": true
+    },
+    "20250725_113419_00148_vtvw6_187935fa-4cbe-4bd0-ab7d-ac42c1d53de8.json_6642_h2_filtered": {
+      "tgt_sim_oracle": 0.5602594614028931,
+      "oracle_hit": true
+    },
+    "20250725_113419_00148_vtvw6_4fa952ef-5078-46ed-942e-fb1067bfd5bd.json_617_h2_filtered": {
+      "tgt_sim_oracle": 0.5578902363777161,
+      "oracle_hit": true
+    },
+    "20250725_113419_00148_vtvw6_6c473cb0-ac95-43cd-9b37-db15e2bdcf75.json_3940_h2_filtered": {
+      "tgt_sim_oracle": 0.5563811659812927,
+      "oracle_hit": true
+    },
+    "20250725_113419_00148_vtvw6_757604cc-6b04-4106-8736-33956e278843.json_1032_h2_filtered": {
+      "tgt_sim_oracle": 0.5561696887016296,
+      "oracle_hit": true
+    },
+    "20250725_113419_00148_vtvw6_4202f67b-d4a3-48ec-ac04-ba3d84f3f7c1.json_6867_h2_filtered": {
+      "tgt_sim_oracle": 0.5542861819267273,
+      "oracle_hit": true
+    },
+    "20250725_113419_00148_vtvw6_0004948a-a201-4823-a42d-d766ce8836b7.json_4268_h2_filtered": {
+      "tgt_sim_oracle": 0.5522587299346924,
+      "oracle_hit": true
+    },
+    "20250725_113419_00148_vtvw6_20a5c4ed-835d-4719-b83f-1920b5d7c488.json_2218_h2_filtered": {
+      "tgt_sim_oracle": 0.5506144165992737,
+      "oracle_hit": true
+    },
+    "20250725_113419_00148_vtvw6_6cd707ef-64f6-42e5-97d4-b4d0bd11d0b6.json_1064_h2_filtered": {
+      "tgt_sim_oracle": 0.549789547920227,
+      "oracle_hit": true
+    },
+    "20250725_113419_00148_vtvw6_1559f7c3-6d44-4419-a52c-051e7b94e399.json_13_h2_filtered": {
+      "tgt_sim_oracle": 0.5473447442054749,
+      "oracle_hit": true
+    },
+    "20250725_113419_00148_vtvw6_44bdd3c9-55b9-4569-876b-32e8da09e36b.json_6482_h2_filtered": {
+      "tgt_sim_oracle": 0.5473073720932007,
+      "oracle_hit": true
+    },
+    "20250725_113419_00148_vtvw6_46be102c-06f7-4ae3-97e0-0b315554b0b0.json_2571_h2_filtered": {
+      "tgt_sim_oracle": 0.5469993352890015,
+      "oracle_hit": true
+    },
+    "20250725_113419_00148_vtvw6_60cab0fd-fbf0-4362-a9b5-bb254c7860bf.json_7810_h2_filtered": {
+      "tgt_sim_oracle": 0.5456565022468567,
+      "oracle_hit": true
+    },
+    "20250725_113419_00148_vtvw6_4fda2eaa-69d4-41a6-aa1d-fea617d42a09.json_7155_h2_filtered": {
+      "tgt_sim_oracle": 0.5425620079040527,
+      "oracle_hit": true
+    },
+    "20250725_113419_00148_vtvw6_105ff5a2-51af-4fd9-b46c-282c54665292.json_4078_h2_filtered": {
+      "tgt_sim_oracle": 0.5417748093605042,
+      "oracle_hit": true
+    },
+    "20250725_113419_00148_vtvw6_137bc269-c16a-4d8d-95da-83e3e5c5d554.json_2777_h2_filtered": {
+      "tgt_sim_oracle": 0.5417434573173523,
+      "oracle_hit": true
+    },
+    "20250725_113419_00148_vtvw6_73e7abc1-55bc-4d72-b319-8a96f2881c97.json_4429_h2_filtered": {
+      "tgt_sim_oracle": 0.5403911471366882,
+      "oracle_hit": true
+    },
+    "20250725_113419_00148_vtvw6_38ff30b4-e332-46ba-b16f-df27efd5909d.json_5708_h2_filtered": {
+      "tgt_sim_oracle": 0.5356624722480774,
+      "oracle_hit": true
+    },
+    "20250725_113419_00148_vtvw6_137bc269-c16a-4d8d-95da-83e3e5c5d554.json_2243_h2_filtered": {
+      "tgt_sim_oracle": 0.5351117849349976,
+      "oracle_hit": true
+    },
+    "20250725_113419_00148_vtvw6_2812161e-2e25-4f49-8a18-e06bb9bf80c3.json_3976_h2_filtered": {
+      "tgt_sim_oracle": 0.5346181988716125,
+      "oracle_hit": true
+    },
+    "20250725_113419_00148_vtvw6_1a9917e3-6c00-4122-9c74-1788af3c779e.json_5560_h2_filtered": {
+      "tgt_sim_oracle": 0.5345985293388367,
+      "oracle_hit": true
+    },
+    "20250725_113419_00148_vtvw6_5f95de58-5a14-45df-a387-1559dae0ed02.json_1354_h2_filtered": {
+      "tgt_sim_oracle": 0.5329578518867493,
+      "oracle_hit": true
+    },
+    "20250725_113419_00148_vtvw6_58e59547-eba5-43af-b6b7-85e61da0c622.json_6962_h2_filtered": {
+      "tgt_sim_oracle": 0.5318002700805664,
+      "oracle_hit": true
+    },
+    "20250725_113419_00148_vtvw6_1f872b00-d51f-4740-8e22-08532bf7977f.json_2062_h2_filtered": {
+      "tgt_sim_oracle": 0.5309063792228699,
+      "oracle_hit": true
+    },
+    "20250725_113419_00148_vtvw6_3c96559d-e594-4071-9d6f-8b05286c4644.json_5514_h2_filtered": {
+      "tgt_sim_oracle": 0.5303140878677368,
+      "oracle_hit": true
+    },
+    "20250725_113419_00148_vtvw6_3ffe8e95-91e7-460d-a488-a5c85cb4f684.json_1988_h2_filtered": {
+      "tgt_sim_oracle": 0.5281068682670593,
+      "oracle_hit": true
+    },
+    "20250725_113419_00148_vtvw6_556370af-554a-417f-89ba-fb87472e03a0.json_2592_h2_filtered": {
+      "tgt_sim_oracle": 0.5276334881782532,
+      "oracle_hit": true
+    },
+    "20250725_113419_00148_vtvw6_44bdd3c9-55b9-4569-876b-32e8da09e36b.json_3392_h2_filtered": {
+      "tgt_sim_oracle": 0.52720707654953,
+      "oracle_hit": true
+    },
+    "20250725_113419_00148_vtvw6_757604cc-6b04-4106-8736-33956e278843.json_317_h2_filtered": {
+      "tgt_sim_oracle": 0.5269749164581299,
+      "oracle_hit": true
+    },
+    "20250725_113419_00148_vtvw6_4af2b5b5-eabb-4baf-8a35-871e5c74170c.json_4010_h2_filtered": {
+      "tgt_sim_oracle": 0.5268427133560181,
+      "oracle_hit": true
+    },
+    "20250725_113419_00148_vtvw6_4fda2eaa-69d4-41a6-aa1d-fea617d42a09.json_1725_h2_filtered": {
+      "tgt_sim_oracle": 0.5267472863197327,
+      "oracle_hit": true
+    },
+    "20250725_113419_00148_vtvw6_1f872b00-d51f-4740-8e22-08532bf7977f.json_4733_h2_filtered": {
+      "tgt_sim_oracle": 0.5259459614753723,
+      "oracle_hit": true
+    },
+    "20250725_113419_00148_vtvw6_58e59547-eba5-43af-b6b7-85e61da0c622.json_3631_h2_filtered": {
+      "tgt_sim_oracle": 0.5251643061637878,
+      "oracle_hit": true
+    },
+    "20250725_113419_00148_vtvw6_59d2a3ea-ae85-46ca-a575-b1384f660b8b.json_130_h2_filtered": {
+      "tgt_sim_oracle": 0.5246927738189697,
+      "oracle_hit": true
+    },
+    "20250725_113419_00148_vtvw6_3c96559d-e594-4071-9d6f-8b05286c4644.json_3686_h2_filtered": {
+      "tgt_sim_oracle": 0.5231064558029175,
+      "oracle_hit": true
+    },
+    "20250725_113419_00148_vtvw6_187935fa-4cbe-4bd0-ab7d-ac42c1d53de8.json_4668_h2_filtered": {
+      "tgt_sim_oracle": 0.522497832775116,
+      "oracle_hit": true
+    },
+    "20250725_113419_00148_vtvw6_0bbfd62a-af6c-415a-aab4-c443972e1d47.json_3366_h2_filtered": {
+      "tgt_sim_oracle": 0.5216577649116516,
+      "oracle_hit": true
+    },
+    "20250725_113419_00148_vtvw6_137bc269-c16a-4d8d-95da-83e3e5c5d554.json_2711_h2_filtered": {
+      "tgt_sim_oracle": 0.5200211405754089,
+      "oracle_hit": true
+    },
+    "20250725_113419_00148_vtvw6_0f698161-244e-4620-b3e8-9b43062627c2.json_6725_h2_filtered": {
+      "tgt_sim_oracle": 0.5197041034698486,
+      "oracle_hit": true
+    },
+    "20250725_113419_00148_vtvw6_27309a04-ad95-4e37-be28-98b916ea1933.json_197_h2_filtered": {
+      "tgt_sim_oracle": 0.5194482803344727,
+      "oracle_hit": true
+    },
+    "20250725_113419_00148_vtvw6_06d74482-b6e4-42b0-81b1-c105c3f53e6a.json_3816_h2_filtered": {
+      "tgt_sim_oracle": 0.5193380117416382,
+      "oracle_hit": true
+    },
+    "20250725_113419_00148_vtvw6_6cd707ef-64f6-42e5-97d4-b4d0bd11d0b6.json_5296_h2_filtered": {
+      "tgt_sim_oracle": 0.5189045071601868,
+      "oracle_hit": true
+    },
+    "20250725_113419_00148_vtvw6_137a4bde-9370-451d-b512-fbe01ceab7eb.json_2339_h2_filtered": {
+      "tgt_sim_oracle": 0.5185099840164185,
+      "oracle_hit": true
+    },
+    "20250725_113419_00148_vtvw6_1a9917e3-6c00-4122-9c74-1788af3c779e.json_444_h2_filtered": {
+      "tgt_sim_oracle": 0.5182753801345825,
+      "oracle_hit": true
+    },
+    "20250725_113419_00148_vtvw6_105ff5a2-51af-4fd9-b46c-282c54665292.json_7107_h2_filtered": {
+      "tgt_sim_oracle": 0.5167784690856934,
+      "oracle_hit": true
+    },
+    "20250725_113419_00148_vtvw6_4af2b5b5-eabb-4baf-8a35-871e5c74170c.json_2990_h2_filtered": {
+      "tgt_sim_oracle": 0.5145633816719055,
+      "oracle_hit": true
+    },
+    "20250725_113419_00148_vtvw6_4b33af78-da23-4536-a5f8-7d3b2b64c1d2.json_7348_h2_filtered": {
+      "tgt_sim_oracle": 0.5145462155342102,
+      "oracle_hit": true
+    },
+    "20250725_113419_00148_vtvw6_2d0ef69a-0986-44c8-a51e-8c549c2b1f88.json_16_h2_filtered": {
+      "tgt_sim_oracle": 0.5144768357276917,
+      "oracle_hit": true
+    },
+    "20250725_113419_00148_vtvw6_5a6f4aa7-395d-4772-8304-cd3a7b401462.json_353_h2_filtered": {
+      "tgt_sim_oracle": 0.5140762329101562,
+      "oracle_hit": true
+    },
+    "20250725_113419_00148_vtvw6_0d87ea0a-2210-4c07-866a-20d1ca39bbdc.json_7427_h2_filtered": {
+      "tgt_sim_oracle": 0.5137501358985901,
+      "oracle_hit": true
+    },
+    "20250725_113419_00148_vtvw6_0004948a-a201-4823-a42d-d766ce8836b7.json_4255_h2_filtered": {
+      "tgt_sim_oracle": 0.5130451917648315,
+      "oracle_hit": true
+    },
+    "20250725_113419_00148_vtvw6_2d0ef69a-0986-44c8-a51e-8c549c2b1f88.json_1845_h2_filtered": {
+      "tgt_sim_oracle": 0.511559247970581,
+      "oracle_hit": true
+    },
+    "20250725_113419_00148_vtvw6_187935fa-4cbe-4bd0-ab7d-ac42c1d53de8.json_3646_h2_filtered": {
+      "tgt_sim_oracle": 0.5111683011054993,
+      "oracle_hit": true
+    },
+    "20250725_113419_00148_vtvw6_6d5094a2-ca20-4642-8a9c-543a9be5468a.json_82_h2_filtered": {
+      "tgt_sim_oracle": 0.5108161568641663,
+      "oracle_hit": true
+    },
+    "20250725_113419_00148_vtvw6_105ff5a2-51af-4fd9-b46c-282c54665292.json_2797_h2_filtered": {
+      "tgt_sim_oracle": 0.5105683207511902,
+      "oracle_hit": true
+    },
+    "20250725_113419_00148_vtvw6_646758f6-662c-4f4a-9fe1-af2a79f7f125.json_6069_h2_filtered": {
+      "tgt_sim_oracle": 0.5104696154594421,
+      "oracle_hit": true
+    },
+    "20250725_113419_00148_vtvw6_0bbfd62a-af6c-415a-aab4-c443972e1d47.json_5837_h2_filtered": {
+      "tgt_sim_oracle": 0.510439932346344,
+      "oracle_hit": true
+    },
+    "20250725_113419_00148_vtvw6_69ce0357-396e-4faa-af4c-eab435ab576d.json_199_h2_filtered": {
+      "tgt_sim_oracle": 0.5094858407974243,
+      "oracle_hit": true
+    },
+    "20250725_113419_00148_vtvw6_4b33af78-da23-4536-a5f8-7d3b2b64c1d2.json_7405_h2_filtered": {
+      "tgt_sim_oracle": 0.5070619583129883,
+      "oracle_hit": true
+    },
+    "20250725_113419_00148_vtvw6_61569199-0658-45c3-9103-774376a4d30e.json_7413_h2_filtered": {
+      "tgt_sim_oracle": 0.506709098815918,
+      "oracle_hit": true
+    },
+    "20250725_113419_00148_vtvw6_636d70ec-3e63-40c7-b83a-3590c55927b9.json_3099_h2_filtered": {
+      "tgt_sim_oracle": 0.5065833926200867,
+      "oracle_hit": true
+    },
+    "20250725_113419_00148_vtvw6_69844373-997f-4021-af68-dbff8e7bff33.json_8219_h2_filtered": {
+      "tgt_sim_oracle": 0.5040385723114014,
+      "oracle_hit": true
+    },
+    "20250725_113419_00148_vtvw6_1cb654d8-0761-4453-8f95-0641ec4d27b0.json_4410_h2_filtered": {
+      "tgt_sim_oracle": 0.5034847855567932,
+      "oracle_hit": true
+    },
+    "20250725_113419_00148_vtvw6_1302b877-be7b-4f16-8155-88974058d2bc.json_3903_h2_filtered": {
+      "tgt_sim_oracle": 0.5029442310333252,
+      "oracle_hit": true
+    },
+    "20250725_113419_00148_vtvw6_137bc269-c16a-4d8d-95da-83e3e5c5d554.json_4363_h2_filtered": {
+      "tgt_sim_oracle": 0.502755343914032,
+      "oracle_hit": true
+    },
+    "20250725_113419_00148_vtvw6_24bd001e-26dd-4d9b-a8bd-93e8de9dc510.json_4899_h2_filtered": {
+      "tgt_sim_oracle": 0.5024445056915283,
+      "oracle_hit": true
+    },
+    "20250725_113419_00148_vtvw6_2acc28cd-8896-43fe-b9c0-8a2bb3ccbc1c.json_1608_h2_filtered": {
+      "tgt_sim_oracle": 0.5010383725166321,
+      "oracle_hit": true
+    },
+    "20250725_113419_00148_vtvw6_60cab0fd-fbf0-4362-a9b5-bb254c7860bf.json_8398_h2_filtered": {
+      "tgt_sim_oracle": 0.5009865760803223,
+      "oracle_hit": true
+    },
+    "20250725_113419_00148_vtvw6_4f1fef48-902d-446e-acb7-91cca7b3e869.json_804_h2_filtered": {
+      "tgt_sim_oracle": 0.5009467005729675,
+      "oracle_hit": true
+    },
+    "20250725_113419_00148_vtvw6_70589e9a-9ceb-4760-8877-059d2fd4f765.json_6572_h2_filtered": {
+      "tgt_sim_oracle": 0.5003039240837097,
+      "oracle_hit": true
+    },
+    "20250725_113419_00148_vtvw6_187935fa-4cbe-4bd0-ab7d-ac42c1d53de8.json_2428_h2_filtered": {
+      "tgt_sim_oracle": 0.4995068311691284,
+      "oracle_hit": true
+    },
+    "20250725_113419_00148_vtvw6_3c96559d-e594-4071-9d6f-8b05286c4644.json_3197_h2_filtered": {
+      "tgt_sim_oracle": 0.49899280071258545,
+      "oracle_hit": true
+    },
+    "20250725_113419_00148_vtvw6_50aafb88-6a05-4a01-97d7-448af0c2e5a8.json_3206_h2_filtered": {
+      "tgt_sim_oracle": 0.49823492765426636,
+      "oracle_hit": true
+    },
+    "20250725_113419_00148_vtvw6_187935fa-4cbe-4bd0-ab7d-ac42c1d53de8.json_3804_h2_filtered": {
+      "tgt_sim_oracle": 0.4980033040046692,
+      "oracle_hit": true
+    },
+    "20250725_113419_00148_vtvw6_73e7abc1-55bc-4d72-b319-8a96f2881c97.json_878_h2_filtered": {
+      "tgt_sim_oracle": 0.4974837899208069,
+      "oracle_hit": true
+    },
+    "20250725_113419_00148_vtvw6_6cd707ef-64f6-42e5-97d4-b4d0bd11d0b6.json_6854_h2_filtered": {
+      "tgt_sim_oracle": 0.4970027208328247,
+      "oracle_hit": true
+    },
+    "20250725_113419_00148_vtvw6_0f698161-244e-4620-b3e8-9b43062627c2.json_912_h2_filtered": {
+      "tgt_sim_oracle": 0.496879518032074,
+      "oracle_hit": true
+    },
+    "20250725_113419_00148_vtvw6_59346acc-5135-493b-b038-ecc57f7774ed.json_1489_h2_filtered": {
+      "tgt_sim_oracle": 0.49603280425071716,
+      "oracle_hit": true
+    },
+    "20250725_113419_00148_vtvw6_5575ee6b-b7af-43cb-93bf-940126492de7.json_2208_h2_filtered": {
+      "tgt_sim_oracle": 0.4957650601863861,
+      "oracle_hit": true
+    },
+    "20250725_113419_00148_vtvw6_757604cc-6b04-4106-8736-33956e278843.json_6422_h2_filtered": {
+      "tgt_sim_oracle": 0.4955025613307953,
+      "oracle_hit": true
+    },
+    "20250725_113419_00148_vtvw6_4fda2eaa-69d4-41a6-aa1d-fea617d42a09.json_8237_h2_filtered": {
+      "tgt_sim_oracle": 0.4945047199726105,
+      "oracle_hit": true
+    },
+    "20250725_113419_00148_vtvw6_6cd707ef-64f6-42e5-97d4-b4d0bd11d0b6.json_2038_h2_filtered": {
+      "tgt_sim_oracle": 0.4943293035030365,
+      "oracle_hit": true
+    },
+    "20250725_113419_00148_vtvw6_1cb654d8-0761-4453-8f95-0641ec4d27b0.json_8052_h2_filtered": {
+      "tgt_sim_oracle": 0.4916645884513855,
+      "oracle_hit": true
+    },
+    "20250725_113419_00148_vtvw6_0bbfd62a-af6c-415a-aab4-c443972e1d47.json_2925_h2_filtered": {
+      "tgt_sim_oracle": 0.49131137132644653,
+      "oracle_hit": true
+    },
+    "20250725_113419_00148_vtvw6_70000a7b-8639-465b-85db-94873db8e417.json_2376_h2_filtered": {
+      "tgt_sim_oracle": 0.49047887325286865,
+      "oracle_hit": true
+    },
+    "20250725_113419_00148_vtvw6_556370af-554a-417f-89ba-fb87472e03a0.json_7647_h2_filtered": {
+      "tgt_sim_oracle": 0.48934754729270935,
+      "oracle_hit": true
+    },
+    "20250725_113419_00148_vtvw6_646758f6-662c-4f4a-9fe1-af2a79f7f125.json_1866_h2_filtered": {
+      "tgt_sim_oracle": 0.4892086386680603,
+      "oracle_hit": true
+    },
+    "20250725_113419_00148_vtvw6_0f698161-244e-4620-b3e8-9b43062627c2.json_3588_h2_filtered": {
+      "tgt_sim_oracle": 0.4888900816440582,
+      "oracle_hit": true
+    },
+    "20250725_113419_00148_vtvw6_69844373-997f-4021-af68-dbff8e7bff33.json_3969_h2_filtered": {
+      "tgt_sim_oracle": 0.4883403480052948,
+      "oracle_hit": true
+    },
+    "20250725_113419_00148_vtvw6_0bbfd62a-af6c-415a-aab4-c443972e1d47.json_1794_h2_filtered": {
+      "tgt_sim_oracle": 0.4858725965023041,
+      "oracle_hit": true
+    },
+    "20250725_113419_00148_vtvw6_62411420-5675-4f2b-ad14-6ec57a29c256.json_3796_h2_filtered": {
+      "tgt_sim_oracle": 0.48495638370513916,
+      "oracle_hit": true
+    },
+    "20250725_113419_00148_vtvw6_5585ea32-7967-41d9-ba75-096d979e6467.json_1995_h2_filtered": {
+      "tgt_sim_oracle": 0.48473989963531494,
+      "oracle_hit": true
+    },
+    "20250725_113419_00148_vtvw6_680673c6-fcdb-49d1-8323-7d6d0b19865a.json_5844_h2_filtered": {
+      "tgt_sim_oracle": 0.4844687879085541,
+      "oracle_hit": true
+    },
+    "20250725_113419_00148_vtvw6_0d87ea0a-2210-4c07-866a-20d1ca39bbdc.json_2572_h2_filtered": {
+      "tgt_sim_oracle": 0.48344123363494873,
+      "oracle_hit": true
+    },
+    "20250725_113419_00148_vtvw6_047cbfc6-3a8c-43cc-8d47-58c407ebdc50.json_2524_h2_filtered": {
+      "tgt_sim_oracle": 0.4829910397529602,
+      "oracle_hit": true
+    },
+    "20250725_113419_00148_vtvw6_1559f7c3-6d44-4419-a52c-051e7b94e399.json_4683_h2_filtered": {
+      "tgt_sim_oracle": 0.4828908443450928,
+      "oracle_hit": true
+    },
+    "20250725_113419_00148_vtvw6_50aafb88-6a05-4a01-97d7-448af0c2e5a8.json_5724_h2_filtered": {
+      "tgt_sim_oracle": 0.48136523365974426,
+      "oracle_hit": true
+    },
+    "20250725_113419_00148_vtvw6_6c473cb0-ac95-43cd-9b37-db15e2bdcf75.json_7319_h2_filtered": {
+      "tgt_sim_oracle": 0.4813627302646637,
+      "oracle_hit": true
+    },
+    "20250725_113419_00148_vtvw6_0174003b-6e9c-47a6-ba51-1b82aee15541.json_343_h2_filtered": {
+      "tgt_sim_oracle": 0.48127228021621704,
+      "oracle_hit": true
+    },
+    "20250725_113419_00148_vtvw6_575483f8-6c4a-49bb-8e80-b5e4135c8ec3.json_5669_h2_filtered": {
+      "tgt_sim_oracle": 0.48054376244544983,
+      "oracle_hit": true
+    },
+    "20250725_113419_00148_vtvw6_00b77987-7803-423e-a3f0-6616b2a3fd8e.json_4439_h2_filtered": {
+      "tgt_sim_oracle": 0.48001015186309814,
+      "oracle_hit": true
+    },
+    "20250725_113419_00148_vtvw6_38ff30b4-e332-46ba-b16f-df27efd5909d.json_7403_h2_filtered": {
+      "tgt_sim_oracle": 0.47969767451286316,
+      "oracle_hit": true
+    },
+    "20250725_113419_00148_vtvw6_70589e9a-9ceb-4760-8877-059d2fd4f765.json_3868_h2_filtered": {
+      "tgt_sim_oracle": 0.4796224534511566,
+      "oracle_hit": true
+    },
+    "20250725_113419_00148_vtvw6_50aafb88-6a05-4a01-97d7-448af0c2e5a8.json_5878_h2_filtered": {
+      "tgt_sim_oracle": 0.4793303608894348,
+      "oracle_hit": true
+    },
+    "20250725_113419_00148_vtvw6_575483f8-6c4a-49bb-8e80-b5e4135c8ec3.json_3505_h2_filtered": {
+      "tgt_sim_oracle": 0.4783232510089874,
+      "oracle_hit": true
+    },
+    "20250725_113419_00148_vtvw6_69ce0357-396e-4faa-af4c-eab435ab576d.json_201_h2_filtered": {
+      "tgt_sim_oracle": 0.4773654043674469,
+      "oracle_hit": true
+    },
+    "20250725_113419_00148_vtvw6_4202f67b-d4a3-48ec-ac04-ba3d84f3f7c1.json_6671_h2_filtered": {
+      "tgt_sim_oracle": 0.4772801101207733,
+      "oracle_hit": true
+    },
+    "20250725_113419_00148_vtvw6_4c1602a2-90b5-4dd2-b7d1-9ae0521311b4.json_199_h2_filtered": {
+      "tgt_sim_oracle": 0.4771825075149536,
+      "oracle_hit": true
+    },
+    "20250725_113419_00148_vtvw6_556370af-554a-417f-89ba-fb87472e03a0.json_2936_h2_filtered": {
+      "tgt_sim_oracle": 0.476574182510376,
+      "oracle_hit": true
+    },
+    "20250725_113419_00148_vtvw6_0d87ea0a-2210-4c07-866a-20d1ca39bbdc.json_6879_h2_filtered": {
+      "tgt_sim_oracle": 0.4757756292819977,
+      "oracle_hit": true
+    },
+    "20250725_113419_00148_vtvw6_24bd001e-26dd-4d9b-a8bd-93e8de9dc510.json_2756_h2_filtered": {
+      "tgt_sim_oracle": 0.4752044081687927,
+      "oracle_hit": true
+    },
+    "20250725_113419_00148_vtvw6_00b77987-7803-423e-a3f0-6616b2a3fd8e.json_2139_h2_filtered": {
+      "tgt_sim_oracle": 0.4748392105102539,
+      "oracle_hit": true
+    },
+    "20250725_113419_00148_vtvw6_61569199-0658-45c3-9103-774376a4d30e.json_7250_h2_filtered": {
+      "tgt_sim_oracle": 0.474679559469223,
+      "oracle_hit": true
+    },
+    "20250725_113419_00148_vtvw6_4cdafcc8-0100-4e36-a8ad-aa1068aeeba3.json_6103_h2_filtered": {
+      "tgt_sim_oracle": 0.4724988341331482,
+      "oracle_hit": true
+    },
+    "20250725_113419_00148_vtvw6_6cd707ef-64f6-42e5-97d4-b4d0bd11d0b6.json_7690_h2_filtered": {
+      "tgt_sim_oracle": 0.47225886583328247,
+      "oracle_hit": true
+    },
+    "20250725_113419_00148_vtvw6_1cb654d8-0761-4453-8f95-0641ec4d27b0.json_7016_h2_filtered": {
+      "tgt_sim_oracle": 0.4708867073059082,
+      "oracle_hit": true
+    },
+    "20250725_113419_00148_vtvw6_3cc927cd-44f4-49f4-a03c-fbf204db635e.json_216_h2_filtered": {
+      "tgt_sim_oracle": 0.47012269496917725,
+      "oracle_hit": true
+    },
+    "20250725_113419_00148_vtvw6_0004948a-a201-4823-a42d-d766ce8836b7.json_145_h2_filtered": {
+      "tgt_sim_oracle": 0.46957969665527344,
+      "oracle_hit": true
+    },
+    "20250725_113419_00148_vtvw6_757604cc-6b04-4106-8736-33956e278843.json_2968_h2_filtered": {
+      "tgt_sim_oracle": 0.46855977177619934,
+      "oracle_hit": true
+    },
+    "20250725_113419_00148_vtvw6_1a9917e3-6c00-4122-9c74-1788af3c779e.json_8319_h2_filtered": {
+      "tgt_sim_oracle": 0.4674808084964752,
+      "oracle_hit": true
+    },
+    "20250725_113419_00148_vtvw6_1a9917e3-6c00-4122-9c74-1788af3c779e.json_5147_h2_filtered": {
+      "tgt_sim_oracle": 0.46703383326530457,
+      "oracle_hit": true
+    },
+    "20250725_113419_00148_vtvw6_0174003b-6e9c-47a6-ba51-1b82aee15541.json_0_h2_filtered": {
+      "tgt_sim_oracle": 0.4669518768787384,
+      "oracle_hit": true
+    },
+    "20250725_113419_00148_vtvw6_62411420-5675-4f2b-ad14-6ec57a29c256.json_7437_h2_filtered": {
+      "tgt_sim_oracle": 0.4660094380378723,
+      "oracle_hit": true
+    },
+    "20250725_113419_00148_vtvw6_6c473cb0-ac95-43cd-9b37-db15e2bdcf75.json_2137_h2_filtered": {
+      "tgt_sim_oracle": 0.46590420603752136,
+      "oracle_hit": true
+    },
+    "20250725_113419_00148_vtvw6_4af2b5b5-eabb-4baf-8a35-871e5c74170c.json_6834_h2_filtered": {
+      "tgt_sim_oracle": 0.4657597839832306,
+      "oracle_hit": true
+    },
+    "20250725_113419_00148_vtvw6_4fda2eaa-69d4-41a6-aa1d-fea617d42a09.json_3260_h2_filtered": {
+      "tgt_sim_oracle": 0.4657154083251953,
+      "oracle_hit": true
+    },
+    "20250725_113419_00148_vtvw6_20a5c4ed-835d-4719-b83f-1920b5d7c488.json_1672_h2_filtered": {
+      "tgt_sim_oracle": 0.4060806632041931,
+      "oracle_hit": false
+    },
+    "20250725_113419_00148_vtvw6_575483f8-6c4a-49bb-8e80-b5e4135c8ec3.json_2507_h2_filtered": {
+      "tgt_sim_oracle": 0.3755282163619995,
+      "oracle_hit": false
+    },
+    "20250725_113419_00148_vtvw6_3c96559d-e594-4071-9d6f-8b05286c4644.json_7197_h2_filtered": {
+      "tgt_sim_oracle": 0.38640958070755005,
+      "oracle_hit": false
+    },
+    "20250725_113419_00148_vtvw6_4f1fef48-902d-446e-acb7-91cca7b3e869.json_5066_h2_filtered": {
+      "tgt_sim_oracle": 0.37646394968032837,
+      "oracle_hit": false
+    },
+    "20250725_113419_00148_vtvw6_695aaa67-1edf-46c7-9fa9-35365cb3dc5d.json_4063_h2_filtered": {
+      "tgt_sim_oracle": 0.3814998269081116,
+      "oracle_hit": false
+    },
+    "20250725_113419_00148_vtvw6_58e59547-eba5-43af-b6b7-85e61da0c622.json_7881_h2_filtered": {
+      "tgt_sim_oracle": 0.44863253831863403,
+      "oracle_hit": false
+    },
+    "20250725_113419_00148_vtvw6_636d70ec-3e63-40c7-b83a-3590c55927b9.json_6573_h2_filtered": {
+      "tgt_sim_oracle": 0.43500208854675293,
+      "oracle_hit": false
+    },
+    "20250725_113419_00148_vtvw6_0d87ea0a-2210-4c07-866a-20d1ca39bbdc.json_6240_h2_filtered": {
+      "tgt_sim_oracle": 0.2783122658729553,
+      "oracle_hit": false
+    },
+    "20250725_113419_00148_vtvw6_0d87ea0a-2210-4c07-866a-20d1ca39bbdc.json_4082_h2_filtered": {
+      "tgt_sim_oracle": 0.3993394672870636,
+      "oracle_hit": false
+    },
+    "20250725_113419_00148_vtvw6_695aaa67-1edf-46c7-9fa9-35365cb3dc5d.json_2017_h2_filtered": {
+      "tgt_sim_oracle": 0.419676274061203,
+      "oracle_hit": false
+    },
+    "20250725_113419_00148_vtvw6_105ff5a2-51af-4fd9-b46c-282c54665292.json_6644_h2_filtered": {
+      "tgt_sim_oracle": 0.4431718587875366,
+      "oracle_hit": false
+    },
+    "20250725_113419_00148_vtvw6_1cb654d8-0761-4453-8f95-0641ec4d27b0.json_2473_h2_filtered": {
+      "tgt_sim_oracle": 0.427996963262558,
+      "oracle_hit": false
+    },
+    "20250725_113419_00148_vtvw6_44bdd3c9-55b9-4569-876b-32e8da09e36b.json_7194_h2_filtered": {
+      "tgt_sim_oracle": 0.46608492732048035,
+      "oracle_hit": false
+    },
+    "20250725_113419_00148_vtvw6_24bd001e-26dd-4d9b-a8bd-93e8de9dc510.json_4674_h2_filtered": {
+      "tgt_sim_oracle": 0.4519786238670349,
+      "oracle_hit": false
+    },
+    "20250725_113419_00148_vtvw6_0f698161-244e-4620-b3e8-9b43062627c2.json_2870_h2_filtered": {
+      "tgt_sim_oracle": 0.371028333902359,
+      "oracle_hit": false
+    },
+    "20250725_113419_00148_vtvw6_187935fa-4cbe-4bd0-ab7d-ac42c1d53de8.json_2056_h2_filtered": {
+      "tgt_sim_oracle": 0.38532209396362305,
+      "oracle_hit": false
+    },
+    "20250725_113419_00148_vtvw6_3c04d0fc-fafb-4689-9dce-006d6956c1c9.json_1837_h2_filtered": {
+      "tgt_sim_oracle": 0.4166363477706909,
+      "oracle_hit": false
+    },
+    "20250725_113419_00148_vtvw6_20a5c4ed-835d-4719-b83f-1920b5d7c488.json_1682_h2_filtered": {
+      "tgt_sim_oracle": 0.3834405541419983,
+      "oracle_hit": false
+    },
+    "20250725_113419_00148_vtvw6_5d0745d8-5a02-467d-b83b-c3f32b5f4af5.json_1476_h2_filtered": {
+      "tgt_sim_oracle": 0.31781473755836487,
+      "oracle_hit": false
+    },
+    "20250725_113419_00148_vtvw6_58e59547-eba5-43af-b6b7-85e61da0c622.json_6745_h2_filtered": {
+      "tgt_sim_oracle": 0.37436750531196594,
+      "oracle_hit": false
+    },
+    "20250725_113419_00148_vtvw6_128790b2-6784-43f0-a02f-b67ba8044f45.json_259_h2_filtered": {
+      "tgt_sim_oracle": 0.32472699880599976,
+      "oracle_hit": false
+    },
+    "20250725_113419_00148_vtvw6_1bccea15-09c9-47c0-8740-454a6d72135a.json_1671_h2_filtered": {
+      "tgt_sim_oracle": 0.3847739100456238,
+      "oracle_hit": false
+    },
+    "20250725_113419_00148_vtvw6_5f95de58-5a14-45df-a387-1559dae0ed02.json_671_h2_filtered": {
+      "tgt_sim_oracle": 0.4057387113571167,
+      "oracle_hit": false
+    },
+    "20250725_113419_00148_vtvw6_320aaf7c-d7ca-4d46-9180-b0d2bc49bd47.json_165_h2_filtered": {
+      "tgt_sim_oracle": 0.3698599636554718,
+      "oracle_hit": false
+    },
+    "20250725_113419_00148_vtvw6_58e59547-eba5-43af-b6b7-85e61da0c622.json_4407_h2_filtered": {
+      "tgt_sim_oracle": 0.34937816858291626,
+      "oracle_hit": false
+    },
+    "20250725_113419_00148_vtvw6_646758f6-662c-4f4a-9fe1-af2a79f7f125.json_4309_h2_filtered": {
+      "tgt_sim_oracle": 0.42664724588394165,
+      "oracle_hit": false
+    },
+    "20250725_113419_00148_vtvw6_2e4f948a-b0eb-429b-b091-8f661c628263.json_7097_h2_filtered": {
+      "tgt_sim_oracle": 0.37837284803390503,
+      "oracle_hit": false
+    },
+    "20250725_113419_00148_vtvw6_261f95a5-10d5-4273-8fcf-e1c649a1a8be.json_296_h2_filtered": {
+      "tgt_sim_oracle": 0.48884421586990356,
+      "oracle_hit": false
+    },
+    "20250725_113419_00148_vtvw6_137a4bde-9370-451d-b512-fbe01ceab7eb.json_7106_h2_filtered": {
+      "tgt_sim_oracle": 0.3184426426887512,
+      "oracle_hit": false
+    },
+    "20250725_113419_00148_vtvw6_575483f8-6c4a-49bb-8e80-b5e4135c8ec3.json_2764_h2_filtered": {
+      "tgt_sim_oracle": 0.3843099772930145,
+      "oracle_hit": false
+    },
+    "20250725_113419_00148_vtvw6_59d2a3ea-ae85-46ca-a575-b1384f660b8b.json_486_h2_filtered": {
+      "tgt_sim_oracle": 0.34199073910713196,
+      "oracle_hit": false
+    },
+    "20250725_113419_00148_vtvw6_61569199-0658-45c3-9103-774376a4d30e.json_4261_h2_filtered": {
+      "tgt_sim_oracle": 0.45973530411720276,
+      "oracle_hit": false
+    },
+    "20250725_113419_00148_vtvw6_5575ee6b-b7af-43cb-93bf-940126492de7.json_5487_h2_filtered": {
+      "tgt_sim_oracle": 0.45442238450050354,
+      "oracle_hit": false
+    },
+    "20250725_113419_00148_vtvw6_1cb654d8-0761-4453-8f95-0641ec4d27b0.json_8410_h2_filtered": {
+      "tgt_sim_oracle": 0.39459168910980225,
+      "oracle_hit": false
+    },
+    "20250725_113419_00148_vtvw6_0004948a-a201-4823-a42d-d766ce8836b7.json_8184_h2_filtered": {
+      "tgt_sim_oracle": 0.304348349571228,
+      "oracle_hit": false
+    },
+    "20250725_113419_00148_vtvw6_59346acc-5135-493b-b038-ecc57f7774ed.json_3087_h2_filtered": {
+      "tgt_sim_oracle": 0.360778272151947,
+      "oracle_hit": false
+    },
+    "20250725_113419_00148_vtvw6_5575ee6b-b7af-43cb-93bf-940126492de7.json_3255_h2_filtered": {
+      "tgt_sim_oracle": 0.32671409845352173,
+      "oracle_hit": false
+    },
+    "20250725_113419_00148_vtvw6_6cd707ef-64f6-42e5-97d4-b4d0bd11d0b6.json_6135_h2_filtered": {
+      "tgt_sim_oracle": 0.45723697543144226,
+      "oracle_hit": false
+    },
+    "20250725_113419_00148_vtvw6_4202f67b-d4a3-48ec-ac04-ba3d84f3f7c1.json_7290_h2_filtered": {
+      "tgt_sim_oracle": 0.39078789949417114,
+      "oracle_hit": false
+    },
+    "20250725_113419_00148_vtvw6_38ff30b4-e332-46ba-b16f-df27efd5909d.json_2124_h2_filtered": {
+      "tgt_sim_oracle": 0.4218427836894989,
+      "oracle_hit": false
+    },
+    "20250725_113419_00148_vtvw6_59346acc-5135-493b-b038-ecc57f7774ed.json_7295_h2_filtered": {
+      "tgt_sim_oracle": 0.346865713596344,
+      "oracle_hit": false
+    },
+    "20250725_113419_00148_vtvw6_38ff30b4-e332-46ba-b16f-df27efd5909d.json_7844_h2_filtered": {
+      "tgt_sim_oracle": 0.3317176401615143,
+      "oracle_hit": false
+    },
+    "20250725_113419_00148_vtvw6_2ffbb7e0-dcce-4eea-b524-3854839f8975.json_5439_h2_filtered": {
+      "tgt_sim_oracle": 0.27810370922088623,
+      "oracle_hit": false
+    },
+    "20250725_113419_00148_vtvw6_59346acc-5135-493b-b038-ecc57f7774ed.json_5834_h2_filtered": {
+      "tgt_sim_oracle": 0.3684350550174713,
+      "oracle_hit": false
+    },
+    "20250725_113419_00148_vtvw6_680673c6-fcdb-49d1-8323-7d6d0b19865a.json_5772_h2_filtered": {
+      "tgt_sim_oracle": 0.36098378896713257,
+      "oracle_hit": false
+    },
+    "20250725_113419_00148_vtvw6_4c1602a2-90b5-4dd2-b7d1-9ae0521311b4.json_6747_h2_filtered": {
+      "tgt_sim_oracle": 0.4044628143310547,
+      "oracle_hit": false
+    },
+    "20250725_113419_00148_vtvw6_06d74482-b6e4-42b0-81b1-c105c3f53e6a.json_8378_h2_filtered": {
+      "tgt_sim_oracle": 0.3135451674461365,
+      "oracle_hit": false
+    },
+    "20250725_113419_00148_vtvw6_137a4bde-9370-451d-b512-fbe01ceab7eb.json_2522_h2_filtered": {
+      "tgt_sim_oracle": 0.38895341753959656,
+      "oracle_hit": false
+    },
+    "20250725_113419_00148_vtvw6_646758f6-662c-4f4a-9fe1-af2a79f7f125.json_3247_h2_filtered": {
+      "tgt_sim_oracle": 0.3392813205718994,
+      "oracle_hit": false
+    },
+    "20250725_113419_00148_vtvw6_1302b877-be7b-4f16-8155-88974058d2bc.json_7610_h2_filtered": {
+      "tgt_sim_oracle": 0.3508964478969574,
+      "oracle_hit": false
+    }
+  }
+}
