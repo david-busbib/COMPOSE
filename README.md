@@ -27,19 +27,30 @@ bash scripts/download_mathlib.sh           # ~3 GB   (Mathlib corpus for enc2)
 python3 code/run_on_paper.py --arxiv_id 1911.06307
 ```
 
-`run_on_paper.py` fetches the paper and its references from Semantic Scholar (no API key needed), builds the citation graph and the Mathlib theorem subgraph automatically, and generates predicted future claims.
+## What `run_on_paper.py` does
 
-> **Without `download_mathlib.sh`** the model runs in enc1-only mode (citation graph only, no Mathlib encoder). Results will be weaker.
+Given only an arXiv ID, the script:
+
+1. **Fetches the paper and all its references** from the Semantic Scholar public API (no API key needed)
+2. **Embeds each reference abstract** with E5-large-v2 and builds the citation subgraph (enc1 input)
+3. **Matches the paper's informal theorems to Mathlib4** using embedding similarity, then builds the formal theorem dependency subgraph (enc2 input)
+4. **Runs the dual-graph encoder** — enc1 (citation GNN) and enc2 (Mathlib GNN) fuse via bidirectional cross-attention
+5. **Decodes with DeepSeek-Math-7B** conditioned on the fused graph representations
+6. **Outputs `--n` predicted future claims** in plain text
+
+No training data or API keys are needed. E5-large-v2 (~1.3 GB) is downloaded automatically from HuggingFace on the first run.
+
+> **Without `download_mathlib.sh`:** enc2 is skipped and the model runs on the citation graph only (enc1-only mode). Predictions will be weaker.
 
 **Options:**
 ```
 --arxiv_id 2301.07041     arXiv paper ID
---n 3                     number of predictions to generate
---max_new_tokens 250
+--n 3                     number of predictions to generate (default: 3)
+--max_new_tokens 250      max tokens per prediction
 --checkpoint /path/to/best_model.pt
 ```
 
-**Example output** (arXiv:1911.06307, "Symbolic power containments in singular rings in positive characteristic"):
+**Example** (arXiv:1911.06307, "Symbolic power containments in singular rings in positive characteristic"):
 ```
 INFO Fetching arXiv:1911.06307 from Semantic Scholar...
 INFO   Title: Symbolic power containments in singular rings in positive characteristic
