@@ -117,29 +117,29 @@ Only cross-attention weights are trained (10.7% of parameters).
 
 To evaluate, generated claims are embedded with E5-large-v2 and used to rank a pool of 47K real future papers by cosine similarity (H@k, MRR). The pool and ground-truth labels are eval-only — the model itself only generates text.
 
-**Confidence-stratified subset (200 samples, 47K pool):**
+**Main evaluation (full test set, 47K pool):**
 
 | Model | H@10 | H@100 | Gap |
 |---|---|---|---|
-| **COMPOSE (ours)** | **0.750** | **0.845** | **0.240** |
-| Prompt-only | 0.625 | 0.905 | 0.211 |
-| GIANTS | 0.640 | 0.940 | 0.207 |
-| GoAI | 0.520 | 0.855 | 0.202 |
-| CoI-GPT4 | 0.448 | 0.845 | 0.176 |
-| Text-only (LoRA) | 0.425 | 0.760 | 0.177 |
-| Fixed NN | 0.130 | 0.510 | 0.108 |
+| **COMPOSE (ours)** | **0.508** | **0.808** | **0.240** |
+| CoI-GPT4 | 0.410 | 0.770 | 0.176 |
+| Text-only (LoRA) | 0.369 | 0.738 | 0.177 |
+| Prompt-only | 0.348 | 0.697 | 0.211 |
+| GoAI | 0.376 | 0.680 | 0.202 |
+| Fixed NN | 0.068 | 0.392 | 0.108 |
+| GIANTS | 0.080 | 0.329 | 0.207 |
 
 ![H@k retrieval curves](assets/hk_curve.png)
 
-**Ablations:**
+**Ablations (confidence-stratified 200-sample subset, 47K pool):**
 
 | Model | H@10 | H@100 | Gap |
 |---|---|---|---|
 | **Full graph (ours)** | **0.750** | **0.845** | **0.201** |
-| Paper-graph only | 0.075 | 0.260 | 0.043 |
 | Formal-graph only | 0.510 | 0.810 | 0.141 |
-| w/o fusion | 0.195 | 0.530 | 0.090 |
 | w/o stage-1 pretraining | 0.240 | 0.505 | 0.093 |
+| w/o fusion | 0.195 | 0.530 | 0.090 |
+| Paper-graph only | 0.075 | 0.260 | 0.043 |
 
 Gap = Tgt-Sim − Neg-Sim (cosine to target minus cosine to 500 random negatives).
 
