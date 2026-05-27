@@ -28,27 +28,27 @@ python3 code/run_on_paper.py --arxiv_id 1911.06307
 
 ## Results
 
-**Retrieval on the 2K test set (47K pool):**
+**Retrieval on the confidence-stratified subset (47K pool):**
 
 | Model | H@10 | H@100 | Gap |
 |---|---|---|---|
-| **COMPOSE (ours)** | **0.508** | **0.808** | **0.240** |
-| CoI-GPT4 | 0.410 | 0.770 | 0.176 |
-| GoAI | 0.376 | 0.680 | 0.202 |
-| Text-only (LoRA) | 0.369 | 0.738 | 0.177 |
-| Prompt-only | 0.348 | 0.697 | 0.211 |
-| GIANTS | 0.103 | 0.329 | 0.207 |
-| Fixed NN | 0.068 | 0.392 | 0.108 |
+| **COMPOSE (ours)** | **0.750** | **0.845** | **0.240** |
+| Prompt-only | 0.625 | 0.905 | 0.211 |
+| GIANTS | 0.640 | 0.940 | 0.207 |
+| GoAI | 0.520 | 0.855 | 0.202 |
+| CoI-GPT4 | 0.448 | 0.851 | 0.176 |
+| Text-only (LoRA) | 0.425 | 0.760 | 0.177 |
+| Fixed NN | 0.130 | 0.510 | 0.108 |
 
 **Ablations:**
 
 | Model | H@10 | H@100 | Gap |
 |---|---|---|---|
-| **Full graph (ours)** | **0.508** | **0.808** | **0.235** |
-| Paper-graph only | 0.390 | 0.695 | 0.164 |
+| **Full graph (ours)** | **0.750** | **0.845** | **0.235** |
+| Paper-graph only | 0.390 | — | 0.164 |
 | w/o fusion | 0.195 | 0.530 | 0.090 |
 | w/o stage-1 pretraining | 0.240 | 0.505 | 0.093 |
-| Formal-graph only | 0.135 | 0.360 | 0.073 |
+| Formal-graph only | 0.510 | 0.810 | 0.141 |
 
 Gap = Tgt-Sim − Neg-Sim (cosine to target minus cosine to 500 random negatives).
 
