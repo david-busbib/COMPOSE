@@ -8,7 +8,13 @@
 
 ---
 
-Given a mathematics paper on arXiv, COMPOSE predicts what theorems will be proved next by jointly encoding its citation graph and its formal Mathlib4 theorem dependencies. A dual-graph encoder conditions a DeepSeek-Math-7B decoder to generate the predicted claim, which is then used to retrieve the actual future paper from a large pool.
+Given a mathematics paper on arXiv, COMPOSE generates a predicted future mathematical claim by jointly encoding its citation graph and its formal Mathlib4 theorem dependencies. A dual-graph GNN encoder fuses both signals via bidirectional cross-attention and conditions a DeepSeek-Math-7B decoder to produce the prediction.
+
+## Requirements
+
+- Python ≥ 3.10, CUDA 12.x, 80 GB VRAM (tested on H200 and L40S)
+- Disk: ~40 GB total (35 GB checkpoint + 3 GB Mathlib + 1.3 GB E5-large-v2 auto-downloaded on first run)
+- Internet required on first run for HuggingFace model downloads
 
 ## Quickstart
 
@@ -18,53 +24,14 @@ pip install -r requirements.txt
 bash scripts/download_checkpoint.sh        # ~35 GB  (model weights)
 bash scripts/download_mathlib.sh           # ~3 GB   (Mathlib corpus for enc2)
 
-export COMPOSE_DATA_DIR=$PWD/data
 python3 code/run_on_paper.py --arxiv_id 1911.06307
 ```
 
-`run_on_paper.py` fetches the paper and its references from Semantic Scholar, builds the citation graph and the Mathlib theorem subgraph automatically, and runs COMPOSE. No training data needed.
+`run_on_paper.py` fetches the paper and its references from Semantic Scholar (no API key needed), builds the citation graph and the Mathlib theorem subgraph automatically, and generates predicted future claims.
 
 > **Without `download_mathlib.sh`** the model runs in enc1-only mode (citation graph only, no Mathlib encoder). Results will be weaker.
 
-## Results
-
-**Retrieval on the confidence-stratified subset (200-sample, 47K pool):**
-
-| Model | H@10 | H@100 | Gap |
-|---|---|---|---|
-| **COMPOSE (ours)** | **0.750** | **0.845** | **0.240** |
-| Prompt-only | 0.625 | 0.905 | 0.211 |
-| GIANTS | 0.640 | 0.940 | 0.207 |
-| GoAI | 0.520 | 0.855 | 0.202 |
-| CoI-GPT4 | 0.448 | 0.845 | 0.176 |
-| Text-only (LoRA) | 0.425 | 0.760 | 0.177 |
-| Fixed NN | 0.130 | 0.510 | 0.108 |
-
-![H@k retrieval curves](assets/hk_curve.png)
-
-**Ablations:**
-
-| Model | H@10 | H@100 | Gap |
-|---|---|---|---|
-| **Full graph (ours)** | **0.750** | **0.845** | **0.201** |
-| Paper-graph only | 0.075 | 0.260 | 0.043 |
-| Formal-graph only | 0.510 | 0.810 | 0.141 |
-| w/o fusion | 0.195 | 0.530 | 0.090 |
-| w/o stage-1 pretraining | 0.240 | 0.505 | 0.093 |
-
-Gap = Tgt-Sim − Neg-Sim (cosine to target minus cosine to 500 random negatives).
-
-**Requirements:** Python ≥ 3.10, CUDA 12.x, 80 GB VRAM (tested on H200 and L40S). Disk: ~40 GB total (35 GB checkpoint + 3 GB Mathlib + 1.3 GB E5-large-v2 auto-downloaded on first run). Internet required on first run for HuggingFace model downloads. See [checkpoints/MANIFEST.md](checkpoints/MANIFEST.md).
-
-## Run on Any arXiv Paper
-
-No data needed — fetches the paper and its references from Semantic Scholar, embeds them on the fly with E5-large-v2, and generates predictions.
-
-```bash
-python3 code/run_on_paper.py --arxiv_id 2301.07041
-```
-
-Options:
+**Options:**
 ```
 --arxiv_id 2301.07041     arXiv paper ID
 --n 3                     number of predictions to generate
@@ -72,7 +39,7 @@ Options:
 --checkpoint /path/to/best_model.pt
 ```
 
-Output (example — arXiv:1911.06307, "Symbolic power containments in singular rings in positive characteristic"):
+**Example output** (arXiv:1911.06307, "Symbolic power containments in singular rings in positive characteristic"):
 ```
 INFO Fetching arXiv:1911.06307 from Semantic Scholar...
 INFO   Title: Symbolic power containments in singular rings in positive characteristic
@@ -117,6 +84,54 @@ number under torus actions on del Pezzo surfaces.
 ======================================================================
 ```
 
+## Architecture
+
+```
+Citation subgraph              Mathlib theorem subgraph
+  [N × 1024] E5                  [M × 1024] E5
+      ↓ SimpleGNN                    ↓ SimpleGNN
+  [N × 1152]                     [M × 1152]
+      ↓ Bridge MLP                   ↓ Bridge MLP
+  [N × 4224]  ←─ bidirectional cross-attention ─→  [M × 4224]
+                              ↓
+                  DeepSeek-Math-7B decoder
+              (cross-attention at layers 3,7,11,15,19,23,27,31)
+                              ↓
+                    Generated future claim (text)
+```
+
+Only cross-attention weights are trained (10.7% of parameters).
+
+## Results
+
+To evaluate, generated claims are embedded with E5-large-v2 and used to rank a pool of 47K real future papers by cosine similarity (H@k, MRR). The pool and ground-truth labels are eval-only — the model itself only generates text.
+
+**Confidence-stratified subset (200 samples, 47K pool):**
+
+| Model | H@10 | H@100 | Gap |
+|---|---|---|---|
+| **COMPOSE (ours)** | **0.750** | **0.845** | **0.240** |
+| Prompt-only | 0.625 | 0.905 | 0.211 |
+| GIANTS | 0.640 | 0.940 | 0.207 |
+| GoAI | 0.520 | 0.855 | 0.202 |
+| CoI-GPT4 | 0.448 | 0.845 | 0.176 |
+| Text-only (LoRA) | 0.425 | 0.760 | 0.177 |
+| Fixed NN | 0.130 | 0.510 | 0.108 |
+
+![H@k retrieval curves](assets/hk_curve.png)
+
+**Ablations:**
+
+| Model | H@10 | H@100 | Gap |
+|---|---|---|---|
+| **Full graph (ours)** | **0.750** | **0.845** | **0.201** |
+| Paper-graph only | 0.075 | 0.260 | 0.043 |
+| Formal-graph only | 0.510 | 0.810 | 0.141 |
+| w/o fusion | 0.195 | 0.530 | 0.090 |
+| w/o stage-1 pretraining | 0.240 | 0.505 | 0.093 |
+
+Gap = Tgt-Sim − Neg-Sim (cosine to target minus cosine to 500 random negatives).
+
 ## Evaluation
 
 ```bash
@@ -135,10 +150,6 @@ python3 code/baselines/metrics/eval_future.py --model retrieval
 python3 code/baselines/metrics/eval_future.py --model goai
 ```
 
-## Data
-
-Training data is not publicly released due to copyright restrictions on the underlying arXiv and Semantic Scholar content.
-
 ## Training
 
 ```bash
@@ -147,25 +158,9 @@ sbatch scripts/train.sh
 
 Uses `COMPOSE_DATA_DIR`, `COMPOSE_CKPT_DIR`, `ENC1_CKPT`, `ENC2_CKPT` environment variables. See `code/train_dual.py` for all hyperparameters.
 
-## Architecture
+## Data
 
-```
-Citation subgraph              Mathlib theorem subgraph
-  [N × 1024] E5                  [M × 1024] E5
-      ↓ SimpleGNN                    ↓ SimpleGNN
-  [N × 1152]                     [M × 1152]
-      ↓ Bridge MLP                   ↓ Bridge MLP
-  [N × 4224]  ←─ bidirectional cross-attention ─→  [M × 4224]
-                              ↓
-                  DeepSeek-Math-7B decoder
-              (cross-attention at layers 3,7,11,15,19,23,27,31)
-                              ↓
-                    Generated claim embedding
-                              ↓
-                Retrieval over 47K future papers
-```
-
-Only cross-attention weights are trained (10.7% of parameters).
+Training data is not publicly released due to copyright restrictions on the underlying arXiv and Semantic Scholar content.
 
 ## Code Layout
 
