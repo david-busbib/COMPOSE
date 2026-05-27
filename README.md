@@ -3,7 +3,7 @@
 **David Busbib, Michael Werman** · Hebrew University of Jerusalem
 
 [![Paper](https://img.shields.io/badge/paper-arXiv-blue)](https://arxiv.org/abs/2506.XXXXX)
-[![Model](https://img.shields.io/badge/🤗-checkpoint-yellow)](https://huggingface.co/david-busbib/COMPOSE)
+[![Model](https://img.shields.io/badge/🤗-checkpoint-yellow)](https://huggingface.co/TheNisso/compose-checkpoint)
 [![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 
 ---
@@ -176,7 +176,6 @@ code/
 ├── build_paper_theorem_embs.py # step 1: embed paper theorems
 ├── build_mathlib_graphs.py     # step 2: build Mathlib subgraphs
 ├── build_dataset_v7.py         # step 3: assemble samples
-├── infer_compare.py            # run inference + compare to baseline
 └── baselines/
     ├── train_text_only.py
     ├── retrieval_baseline.py
