@@ -28,7 +28,7 @@ import numpy as np
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
-from transformers import AutoTokenizer, AutoModelForCausalLM
+from transformers import AutoTokenizer, AutoModelForCausalLM, AutoConfig
 from peft import get_peft_model, LoraConfig, TaskType
 
 from cross_attention_layers import (
@@ -1137,28 +1137,16 @@ class MistralDecoder(nn.Module):
             if "Qwen2-0.5B" in model_name or "Qwen2-1.5B" in model_name:
                 dtype = torch.float32  # Qwen2 small models work fine with float32
             else:
-                dtype = torch.float16  # Larger models (Mistral) need float16
+                dtype = torch.float16  # Larger models need float16
 
-            # 🔥 FIX: Add use_safetensors=False for PyTorch 2.9 compatibility
-            device_map_arg = "auto" if device == "auto" else {"": device}
-            try:
-                self.model = AutoModelForCausalLM.from_pretrained(
-                    model_name,
-                    torch_dtype=dtype,
-                    device_map=device_map_arg,
-                )
-            except ValueError as e:
-                if "could not determine the shape" in str(e):
-                    logger.warning(f"Safetensors loading failed, falling back to PyTorch format: {e}")
-                    self.model = AutoModelForCausalLM.from_pretrained(
-                        model_name,
-                        torch_dtype=dtype,
-                        use_safetensors=False,
-                        device_map=device_map_arg,
-                    )
-                else:
-                    raise
-            logger.info(f"Loaded model with dtype: {dtype}")
+            # Build architecture from config only — weights come from our checkpoint,
+            # so downloading the base model's 14GB weights would be wasted.
+            _hf_config = AutoConfig.from_pretrained(model_name)
+            self.model = AutoModelForCausalLM.from_config(_hf_config)
+            self.model = self.model.to(dtype)
+            _target_device = "cuda" if device == "auto" else device
+            self.model = self.model.to(_target_device)
+            logger.info(f"Loaded model architecture with dtype: {dtype}")
 
         # ✅ NEW: Load pretrained LoRA checkpoint if provided
         if lora_checkpoint_path is not None:

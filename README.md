@@ -52,7 +52,7 @@ python3 code/run_on_paper.py --arxiv_id 1911.06307
 
 Gap = Tgt-Sim − Neg-Sim (cosine to target minus cosine to 500 random negatives).
 
-**Requirements:** Python ≥ 3.10, CUDA 12.x, 80 GB VRAM (tested on H200 and L40S). Checkpoint is ~35 GB — see [checkpoints/MANIFEST.md](checkpoints/MANIFEST.md).
+**Requirements:** Python ≥ 3.10, CUDA 12.x, 80 GB VRAM (tested on H200 and L40S). Disk: ~40 GB total (35 GB checkpoint + 3 GB Mathlib + 1.3 GB E5-large-v2 auto-downloaded on first run). Internet required on first run for HuggingFace model downloads. See [checkpoints/MANIFEST.md](checkpoints/MANIFEST.md).
 
 ## Run on Any arXiv Paper
 
