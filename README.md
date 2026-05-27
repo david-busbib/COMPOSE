@@ -28,23 +28,23 @@ python3 code/run_on_paper.py --arxiv_id 1911.06307
 
 ## Results
 
-**Retrieval against 14,677 future papers (2024–2025):**
+**Retrieval on the 2K test set (47K pool):**
 
 | Model | H@10 | H@100 | Gap |
 |---|---|---|---|
-| **COMPOSE (ours)** | **0.505** | **0.808** | **0.240** |
+| **COMPOSE (ours)** | **0.508** | **0.808** | **0.240** |
 | CoI-GPT4 | 0.410 | 0.770 | 0.176 |
 | GoAI | 0.376 | 0.680 | 0.202 |
 | Text-only (LoRA) | 0.369 | 0.738 | 0.177 |
 | Prompt-only | 0.348 | 0.697 | 0.211 |
-| GIANTS | 0.080 | 0.329 | 0.207 |
+| GIANTS | 0.103 | 0.329 | 0.207 |
 | Fixed NN | 0.068 | 0.392 | 0.108 |
 
 **Ablations:**
 
 | Model | H@10 | H@100 | Gap |
 |---|---|---|---|
-| **Full graph (ours)** | **0.505** | **0.808** | **0.235** |
+| **Full graph (ours)** | **0.508** | **0.808** | **0.235** |
 | Paper-graph only | 0.390 | 0.695 | 0.164 |
 | w/o fusion | 0.195 | 0.530 | 0.090 |
 | w/o stage-1 pretraining | 0.240 | 0.505 | 0.093 |
@@ -160,7 +160,7 @@ Citation subgraph              Mathlib theorem subgraph
                               ↓
                     Generated claim embedding
                               ↓
-                Retrieval over 14,677 future papers
+                Retrieval over 47K future papers
 ```
 
 Only cross-attention weights are trained (10.7% of parameters).
