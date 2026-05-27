@@ -28,7 +28,7 @@ python3 code/run_on_paper.py --arxiv_id 1911.06307
 
 ## Results
 
-**Retrieval on the confidence-stratified subset (47K pool):**
+**Retrieval on the confidence-stratified subset (200-sample, 47K pool):**
 
 | Model | H@10 | H@100 | Gap |
 |---|---|---|---|
@@ -36,19 +36,21 @@ python3 code/run_on_paper.py --arxiv_id 1911.06307
 | Prompt-only | 0.625 | 0.905 | 0.211 |
 | GIANTS | 0.640 | 0.940 | 0.207 |
 | GoAI | 0.520 | 0.855 | 0.202 |
-| CoI-GPT4 | 0.448 | 0.851 | 0.176 |
+| CoI-GPT4 | 0.448 | 0.845 | 0.176 |
 | Text-only (LoRA) | 0.425 | 0.760 | 0.177 |
 | Fixed NN | 0.130 | 0.510 | 0.108 |
+
+![H@k retrieval curves](assets/hk_curve.png)
 
 **Ablations:**
 
 | Model | H@10 | H@100 | Gap |
 |---|---|---|---|
-| **Full graph (ours)** | **0.750** | **0.845** | **0.235** |
-| Paper-graph only | 0.390 | — | 0.164 |
+| **Full graph (ours)** | **0.750** | **0.845** | **0.201** |
+| Paper-graph only | 0.075 | 0.260 | 0.043 |
+| Formal-graph only | 0.510 | 0.810 | 0.141 |
 | w/o fusion | 0.195 | 0.530 | 0.090 |
 | w/o stage-1 pretraining | 0.240 | 0.505 | 0.093 |
-| Formal-graph only | 0.510 | 0.810 | 0.141 |
 
 Gap = Tgt-Sim − Neg-Sim (cosine to target minus cosine to 500 random negatives).
 

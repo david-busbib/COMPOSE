@@ -364,10 +364,9 @@ def load_model(ckpt_path, device, use_enc2=False):
     model.decoder.load_state_dict(ckpt['decoder_state_dict'])
     model.enc1.gnn.load_state_dict(ckpt['enc1_gnn_state_dict'])
     if use_enc2:
-        result = model.enc2.gnn.load_state_dict(ckpt['enc2_gnn_adapt_state_dict'], strict=False)
-        if result.missing_keys or result.unexpected_keys:
-            logger.debug(f"  enc2 GNN partial load — missing: {result.missing_keys[:3]}, "
-                         f"unexpected: {result.unexpected_keys[:3]}")
+        enc2_ckpt = ckpt['enc2_gnn_adapt_state_dict']
+        model.enc2.gnn.W_struct.load_state_dict(enc2_ckpt['W_struct'])
+        model.enc2.gnn.layer_norms.load_state_dict(enc2_ckpt['layer_norms'])
     logger.info(f"  epoch={ckpt.get('epoch')}, val_loss={ckpt.get('val_loss', '?'):.4f}")
     return model.float().eval().to(device)
 
