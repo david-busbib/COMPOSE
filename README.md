@@ -3,6 +3,7 @@
 **David Busbib, Michael Werman** · Hebrew University of Jerusalem
 
 [![Paper](https://img.shields.io/badge/paper-arXiv-blue)](https://arxiv.org/abs/2506.XXXXX)
+[![Website](https://img.shields.io/badge/website-project%20page-orange)](https://david-busbib.github.io/COMPOSE-page/)
 [![Model](https://img.shields.io/badge/🤗-checkpoint-yellow)](https://huggingface.co/TheNisso/compose-checkpoint)
 [![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 
