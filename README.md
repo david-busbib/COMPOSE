@@ -4,7 +4,7 @@
 
 [![Paper](https://img.shields.io/badge/paper-arXiv-blue)](https://arxiv.org/abs/2605.30333)
 [![Website](https://img.shields.io/badge/website-project%20page-orange)](https://david-busbib.github.io/COMPOSE-page/)
-[![Model](https://img.shields.io/badge/🤗-checkpoint-yellow)](https://huggingface.co/TheNisso/compose-checkpoint)
+[![Model](https://img.shields.io/badge/🤗-checkpoint-yellow)](https://huggingface.co/davidbusbib/compose-checkpoint)
 [![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 
 ---

@@ -7,7 +7,7 @@ mkdir -p "$TARGET"
 
 python3 -c "import huggingface_hub" 2>/dev/null || pip install huggingface-hub
 
-huggingface-cli download TheNisso/compose-checkpoint \
+huggingface-cli download davidbusbib/compose-checkpoint \
     --repo-type model \
     --local-dir "$TARGET"
 

@@ -15,7 +15,7 @@ bash scripts/download_checkpoint.sh
 
 Or manually:
 ```bash
-huggingface-cli download TheNisso/compose-checkpoint --repo-type model --local-dir checkpoints/
+huggingface-cli download davidbusbib/compose-checkpoint --repo-type model --local-dir checkpoints/
 ```
 
 ## Provenance
